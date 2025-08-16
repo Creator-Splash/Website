@@ -291,14 +291,14 @@ export default function MCCWebsite() {
           >
             <path
               d="M0,60 C300,20 600,100 900,60 C1050,30 1150,80 1200,60 L1200,120 L0,120 Z"
-              fill="#f3b7d7"
+              fill="#fdc273"
             />
           </svg>
         </div>
       </section>
 
       {/* Contest Section with Wavy Bottom */}
-      <section className="relative bg-[#f3b7d7] py-16">
+      <section className="relative bg-[#fdc273] py-16">
         {/* Blocky Top Border */}
         {/* <div className="absolute top-0 left-0 w-full h-4 bg-[#1a202c]">
           <div className="flex h-full">
