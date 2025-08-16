@@ -230,23 +230,6 @@ export default function MCCWebsite() {
       >
         <div className="container mx-auto px-0 pt-30 sm:pt-20 md:pt-25 lg:pt-30 max-w-6xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
-            <Card className="bg-blue-500 text-white p-6 hover:bg-blue-600 transition-colors cursor-pointer">
-              <a
-                href="https://x.com/CreatorSplash"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="flex items-center">
-                  <Twitter className="w-8 h-8 mr-3" />
-                  <div>
-                    <div className="text-sm font-semibold opacity-90">
-                      TWITTER
-                    </div>
-                    <div className="font-bold">Follow us for news!</div>
-                  </div>
-                </div>
-              </a>
-            </Card>
             <Card className="bg-purple-600 text-white p-6 hover:bg-purple-700 transition-colors cursor-pointer">
               <a
                 href="https://discord.com/invite/Fpa9Ps8NdR"
@@ -260,6 +243,23 @@ export default function MCCWebsite() {
                       DISCORD
                     </div>
                     <div className="font-bold">Meet other players!</div>
+                  </div>
+                </div>
+              </a>
+            </Card>
+            <Card className="bg-blue-500 text-white p-6 hover:bg-blue-600 transition-colors cursor-pointer">
+              <a
+                href="https://x.com/CreatorSplash"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="flex items-center">
+                  <Twitter className="w-8 h-8 mr-3" />
+                  <div>
+                    <div className="text-sm font-semibold opacity-90">
+                      TWITTER
+                    </div>
+                    <div className="font-bold">Follow us for news!</div>
                   </div>
                 </div>
               </a>
@@ -291,14 +291,14 @@ export default function MCCWebsite() {
           >
             <path
               d="M0,60 C300,20 600,100 900,60 C1050,30 1150,80 1200,60 L1200,120 L0,120 Z"
-              fill="#fdc700"
+              fill="#f3b7d7"
             />
           </svg>
         </div>
       </section>
 
       {/* Contest Section with Wavy Bottom */}
-      <section className="relative bg-[#fdc700] py-16">
+      <section className="relative bg-[#f3b7d7] py-16">
         {/* Blocky Top Border */}
         {/* <div className="absolute top-0 left-0 w-full h-4 bg-[#1a202c]">
           <div className="flex h-full">
