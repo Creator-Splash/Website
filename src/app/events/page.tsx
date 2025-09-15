@@ -547,82 +547,38 @@ export default function MCCWebsite() {
           >
             <path
               d="M0,60 C300,100 600,20 900,60 C1050,80 1150,30 1200,60 L1200,120 L0,120 Z"
-              fill="#38bdf8"
+              fill="#39b5ff"
             />
           </svg>
         </div>
       </section>
 
       {/* Merch section */}
-      <section className="relative bg-gradient-to-b from-[#38bdf8] to-[#2563eb] py-16 sm:py-20 md:py-24 min-h-[500px] sm:min-h-[600px] md:min-h-[700px]">
-        <div className="container flex flex-col mx-auto px-4">
+      <section className="relative bg-[#39b5ff] py-24 sm:py-20 md:py-24 min-h-[900px] sm:min-h-[600px] md:min-h-[900px]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/merch1.png"
+            alt="meow"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
+        {/* Optional overlay to maintain text readability */}
+        <div className="absolute inset-0  z-10"></div>
+
+        {/* <div className="container flex flex-col mx-auto px-4 relative z-20">
           <div className="flex flex-col items-center mb-8 sm:mb-12 md:ml-64">
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center text-[#1e293b]">
               Creator Splash Merch
             </h2>
           </div>
-
-          <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center">
-            {/* Left Side - Large Circular Image */}
-            <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full p-3 sm:p-4  md:z-11 md:mr-4">
-                <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center relative">
-                  <Image
-                    src={merchSlides[merchSlide].logoimage}
-                    alt={merchSlides[merchSlide].title}
-                    width={380}
-                    height={380}
-                    className="object-contain"
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Center Content */}
-            <div className="flex-1 bg-white rounded-xl shadow-xl p-6 sm:p-8 md:px-16 md:mr-6 md:-ml-32 md:z-10 md:h-64">
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-[#1e293b]">
-                {merchSlides[merchSlide].title}
-              </h3>
-              <p className="text-[#1e293b] mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
-                {merchSlides[merchSlide].description}
-              </p>
-              <a href={storeUrl} target="_blank" rel="noopener noreferrer">
-                <Button className="bg-red-600 hover:bg-red-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded font-bold transition-colors w-full sm:w-auto">
-                  GO TO THE STORE
-                </Button>
-              </a>
-            </div>
-
-            {/* Right Side - Navigation Dots */}
-            {/* <div className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-4 mt-6 md:mt-0">
-              {merchSlides.map((slide, idx) => (
-                <button
-                  key={idx}
-                  className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full transition-all duration-300 shadow-lg ${
-                    idx === merchSlide
-                      ? "bg-white scale-110 shadow-red-600/30 hover:bg-white"
-                      : "bg-[#1a202c] hover:bg-white"
-                  }`}
-                  onClick={() => setMerchSlide(idx)}
-                >
-                  <div className="w-full h-full rounded-full flex items-center justify-center relative">
-                    <Image
-                      src={slide.image}
-                      alt={slide.title}
-                      width={48}
-                      height={48}
-                      className="object-contain"
-                    />
-                  </div>
-                </button>
-              ))}
-            </div> */}
-          </div>
-        </div>
+        </div> */}
 
         {/* Wavy Bottom Border */}
-        <div className="absolute -bottom-15 left-0 w-full overflow-hidden z-1000">
+        {/* <div className="absolute -bottom-15 left-0 w-full overflow-hidden z-30">
           <svg
             className="relative block w-full h-20 rotate-180"
             viewBox="0 0 1200 120"
@@ -633,7 +589,7 @@ export default function MCCWebsite() {
               fill="#2563eb"
             />
           </svg>
-        </div>
+        </div> */}
       </section>
     </div>
   );

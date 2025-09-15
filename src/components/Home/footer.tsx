@@ -149,7 +149,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="text-xs opacity-80">
-            © 2025 Creator Splash. All rights reserved.
+            © 2026 Creator Splash. All rights reserved.
           </div>
         </div>
       </div>

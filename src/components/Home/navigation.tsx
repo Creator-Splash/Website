@@ -12,9 +12,9 @@ export default function Navigation() {
   const navItems = [
     { href: "/", label: "ABOUT" },
     { href: "/teams", label: "TEAM" },
-     { href: "/events", label: "EVENTS" },
+    { href: "/events", label: "EVENTS" },
     { href: "/shop", label: "SHOP" },
-
+    { href: "/careers", label: "Careers" },
   ];
 
   return (
