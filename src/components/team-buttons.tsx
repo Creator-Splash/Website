@@ -1,8 +1,7 @@
 "use client";
-
 import Link from "next/link";
 import { Button } from "@/components/ui/8bit/button";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 interface TeamRole {
   name: string;
@@ -61,10 +60,9 @@ export default function JoinTeamSection() {
   return (
     <section className="bg-gray-200 flex items-center justify-center p-8">
       <div className="max-w-4xl w-full">
-        <p className="text-6xl font-bold text-center p-16 text-black  tracking-wider">
+        <p className="text-6xl font-bold text-center p-16 text-black tracking-wider">
           Join Our Team!
         </p>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {teamRoles.map((role, index) => (
             <HoverButton key={index} role={role} />
@@ -78,19 +76,58 @@ export default function JoinTeamSection() {
 function HoverButton({ role }: { role: TeamRole }) {
   const [isHovered, setIsHovered] = useState(false);
 
+  // Generate random rotation angle for this button (between -15 and 15 degrees)
+  const randomRotation = useMemo(() => {
+    return (Math.random() - 0.5) * 30; // Random between -15 and 15 degrees
+  }, []);
+
   return (
     <Link href={role.url} target="_blank" rel="noopener noreferrer">
       <Button
-        className="w-full flex  transition-all duration-300 text-xl justify-center items-center py-8"
+        className="w-full flex justify-center items-center py-8 text-xl "
         style={{
           backgroundColor: isHovered ? role.hoverBg : role.bg,
           color: role.textColor,
-          transform: isHovered ? "scale(1.08)" : "scale(1)",
+          transform: isHovered
+            ? `scale(1.15) rotate(${randomRotation}deg) translateY(-8px)`
+            : "scale(1) rotate(0deg) translateY(0px)",
+          transition: "all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+
+          zIndex: isHovered ? 10 : 1,
         }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <span className="pb-1 ">{role.name}</span>
+        <span
+          className="pb-1 relative z-10"
+          style={{
+            transform: isHovered ? "scale(1.1)" : "scale(1)",
+            transition: "transform 0.3s ease-out",
+          }}
+        >
+          {role.name}
+        </span>
+
+        {/* Animated sparkle effect */}
+        <div
+          className="absolute inset-0 opacity-0 pointer-events-none"
+          style={{
+            background: `radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.3) 0%, transparent 70%)`,
+            opacity: isHovered ? 0.6 : 0,
+            transform: isHovered ? "scale(1.2)" : "scale(0.8)",
+            transition: "all 0.4s ease-out",
+          }}
+        />
+
+        {/* Pulse ring effect */}
+        <div
+          className="absolute inset-0 rounded-lg pointer-events-none"
+          style={{
+            opacity: isHovered ? 1 : 0,
+            transform: isHovered ? "scale(1.1)" : "scale(1)",
+            transition: "all 0.3s ease-out",
+          }}
+        />
       </Button>
     </Link>
   );
