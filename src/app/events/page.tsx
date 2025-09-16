@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 
-export default function MCCWebsite() {
+export default function Events() {
   const [contestSlide, setContestSlide] = useState(0);
   const [gamesSlide, setGamesSlide] = useState(0);
   const [merchSlide] = useState(0);
@@ -55,7 +55,7 @@ export default function MCCWebsite() {
     {
       title: "Season Opening",
       description:
-        "Before each season starts, Creator Splash hosts a musical animation ceremony that brings together some of Minecraft’s best animators and singers/groups to perform live on stage.",
+        "Before each season starts, Creator Splash hosts a musical animation ceremony that brings together some of Minecraft's best animators and singers/groups to perform live on stage.",
       image: "/SH03.png",
     },
     {
@@ -138,7 +138,7 @@ export default function MCCWebsite() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section with Background Video */}
-      <section className="relative h-162 sm:h-96 md:h-120 lg:h-162 overflow-hidden">
+      <section className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] xl:h-162 overflow-hidden">
         {/* Blurred Background Video */}
         <video
           autoPlay
@@ -151,7 +151,7 @@ export default function MCCWebsite() {
         </video>
 
         {/* Centered Video Card Container */}
-        <div className="relative z-30 container mx-auto px-4 h-full flex items-center justify-center">
+        <div className="relative z-30 container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center">
           <div className="relative max-w-6xl w-full">
             {/* Main Video Card */}
             <div className="relative rounded-lg overflow-hidden shadow-2xl">
@@ -160,7 +160,7 @@ export default function MCCWebsite() {
                 muted
                 loop
                 playsInline
-                className="relative w-full h-180 sm:h-48 md:h-80 lg:h-130 object-cover rounded-lg mb-12"
+                className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-130 object-cover rounded-lg mb-6 sm:mb-8 md:mb-12"
               >
                 <source src="/intro.mp4" type="video/mp4" />
               </video>
@@ -169,7 +169,7 @@ export default function MCCWebsite() {
               <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center">
                 <div className="text-center text-white px-4 sm:px-6 md:px-8">
                   <h1
-                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-yellow-400 drop-shadow-lg"
+                    className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 text-yellow-400 drop-shadow-lg"
                     style={{
                       fontFamily: "Impact, sans-serif",
                       textShadow: "3px 3px 6px rgba(0,0,0,0.8)",
@@ -178,28 +178,27 @@ export default function MCCWebsite() {
                   >
                     <br />
                     <div className="flex items-center justify-center">
-                      {" "}
                       <Image
                         width={500}
                         height={500}
                         src="/logo.png"
                         alt=""
-                        className=""
+                        className="w-[250px] sm:w-[350px] md:w-[400px] lg:w-[450px] xl:w-[500px] h-auto"
                       />
                     </div>
                   </h1>
-                  <p className="text-sm sm:text-base md:text-lg mb-6 max-w-2xl mx-auto drop-shadow-md font-medium">
+                  <p className="text-xs sm:text-sm md:text-base lg:text-lg mb-4 sm:mb-6 max-w-2xl mx-auto drop-shadow-md font-medium px-2">
                     Creator Splash is a Minecraft event bringing 40 creators
                     together to compete in a brand-new roster of Minecraft
                     games!
                   </p>
-                  <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 text-lg sm:text-xl">
+                  <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 text-sm sm:text-base md:text-lg lg:text-xl">
                     <a
                       href="https://discord.com/invite/Fpa9Ps8NdR"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Button className="bg-blue-600 hover:bg-blue-700 px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 font-bold text-white">
+                      <Button className="bg-blue-600 hover:bg-blue-700 px-4 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-4 md:py-5 lg:py-6 font-bold text-white w-full sm:w-auto">
                         DISCORD
                       </Button>
                     </a>
@@ -208,7 +207,7 @@ export default function MCCWebsite() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Button className="bg-red-600 hover:bg-red-700 px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 font-bold text-white w-full sm:w-auto">
+                      <Button className="bg-red-600 hover:bg-red-700 px-4 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-4 md:py-5 lg:py-6 font-bold text-white w-full sm:w-auto">
                         MERCH
                       </Button>
                     </a>
@@ -222,61 +221,67 @@ export default function MCCWebsite() {
 
       {/* Social Cards */}
       <section
-        className="relative py-8 bg-[#1a202c] -mt-50 sm:-mt-32 md:-mt-40 lg:-mt-50 -bottom-1"
+        className="relative py-8 bg-[#1a202c] -mt-12 sm:-mt-16 md:-mt-20 lg:-mt-32 xl:-mt-50 -bottom-1"
         style={{
           clipPath:
             "polygon(0 20%, 5% 10%, 10% 20%, 15% 10%, 20% 20%, 25% 10%, 30% 20%, 35% 10%, 40% 20%, 45% 10%, 50% 20%, 55% 10%, 60% 20%, 65% 10%, 70% 20%, 75% 10%, 80% 20%, 85% 10%, 90% 20%, 95% 10%, 100% 20%, 100% 100%, 0 100%)",
         }}
       >
-        <div className="container mx-auto px-0 pt-30 sm:pt-20 md:pt-25 lg:pt-30 max-w-6xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 md:pt-24 lg:pt-30 max-w-6xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
-            <Card className="bg-purple-600 text-white p-6 hover:bg-purple-700 transition-colors cursor-pointer">
+            <Card className="bg-purple-600 text-white p-4 sm:p-6 hover:bg-purple-700 transition-colors cursor-pointer">
               <a
                 href="https://discord.com/invite/Fpa9Ps8NdR"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <div className="flex items-center">
-                  <Users className="w-8 h-8 mr-3" />
+                  <Users className="w-6 h-6 sm:w-8 sm:h-8 mr-3" />
                   <div>
-                    <div className="text-sm font-semibold opacity-90">
+                    <div className="text-xs sm:text-sm font-semibold opacity-90">
                       DISCORD
                     </div>
-                    <div className="font-bold">Meet other players!</div>
+                    <div className="text-sm sm:text-base font-bold">
+                      Meet other players!
+                    </div>
                   </div>
                 </div>
               </a>
             </Card>
-            <Card className="bg-blue-500 text-white p-6 hover:bg-blue-600 transition-colors cursor-pointer">
+            <Card className="bg-blue-500 text-white p-4 sm:p-6 hover:bg-blue-600 transition-colors cursor-pointer">
               <a
                 href="https://x.com/CreatorSplash"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <div className="flex items-center">
-                  <Twitter className="w-8 h-8 mr-3" />
+                  <Twitter className="w-6 h-6 sm:w-8 sm:h-8 mr-3" />
                   <div>
-                    <div className="text-sm font-semibold opacity-90">
+                    <div className="text-xs sm:text-sm font-semibold opacity-90">
                       TWITTER
                     </div>
-                    <div className="font-bold">Follow us for news!</div>
+                    <div className="text-sm sm:text-base font-bold">
+                      Follow us for news!
+                    </div>
                   </div>
                 </div>
               </a>
             </Card>
-            <Card className="bg-red-600 text-white p-6 hover:bg-red-700 transition-colors cursor-pointer sm:col-span-2 md:col-span-1">
+            <Card className="bg-red-600 text-white p-4 sm:p-6 hover:bg-red-700 transition-colors cursor-pointer sm:col-span-2 md:col-span-1">
               <a
                 href="https://www.youtube.com/@creatorsplash"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <div className="flex items-center">
-                  <Eye className="w-8 h-8 mr-3" />
+                  <Eye className="w-6 h-6 sm:w-8 sm:h-8 mr-3" />
                   <div>
-                    <div className="text-sm font-semibold opacity-90">
+                    <div className="text-xs sm:text-sm font-semibold opacity-90">
                       YOUTUBE
                     </div>
-                    <div className="font-bold">Watch our videos!</div>
+                    <div className="text-sm sm:text-base font-bold">
+                      Watch our videos!
+                    </div>
                   </div>
                 </div>
               </a>
@@ -285,7 +290,7 @@ export default function MCCWebsite() {
         </div>
         <div className="absolute bottom-0 left-0 w-full overflow-hidden">
           <svg
-            className="relative block w-full h-20"
+            className="relative block w-full h-12 sm:h-16 md:h-20"
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
           >
@@ -298,36 +303,17 @@ export default function MCCWebsite() {
       </section>
 
       {/* Contest Section with Wavy Bottom */}
-      <section className="relative bg-[#fdc273] py-16">
-        {/* Blocky Top Border */}
-        {/* <div className="absolute top-0 left-0 w-full h-4 bg-[#1a202c]">
-          <div className="flex h-full">
-            {[
-              100, 20, 100, 20, 100, 20, 100, 20, 100, 20, 100, 20, 100, 20,
-              100, 20, 100, 20, 100, 20, 100, 20, 100, 20, 100, 20, 100, 20,
-            ].map((height, i) => (
-              <div
-                key={i}
-                className="flex-1 bg-yellow-400"
-                style={{
-                  height: `${height}%`,
-                  marginTop: `${100 - height}%`,
-                }}
-              />
-            ))}
-          </div>
-        </div> */}
-        <div className="container mx-auto px-24 ">
-          <div className="text-left mb-12">
+      <section className="relative bg-[#fdc273] py-8 sm:py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-8 md:px-12 lg:px-24">
+          <div className="text-left mb-8 sm:mb-10 md:mb-12">
             <h1
-              className="text-8xl font-bold text-slate-900"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-slate-900"
               style={{ fontFamily: "Impact, sans-serif" }}
             >
               OUR
             </h1>
-
             <h1
-              className="text-9xl font-bold text-slate-900"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-slate-900"
               style={{ fontFamily: "Impact, sans-serif" }}
             >
               EVENTS
@@ -336,59 +322,93 @@ export default function MCCWebsite() {
 
           <div className="relative max-w-6xl mx-auto">
             <div className="relative">
+              {/* Desktop Navigation Buttons */}
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute -left-24 z-20 bg-white/80 hover:bg-white top-1/2 -translate-y-1/2 p-8 rounded-full"
+                className="absolute -left-8 sm:-left-12 md:-left-16 lg:-left-24 z-20 bg-white/80 hover:bg-white top-1/2 -translate-y-1/2 p-4 sm:p-6 md:p-8 rounded-full hidden sm:flex"
                 onClick={() => setContestSlide(Math.max(0, contestSlide - 1))}
               >
-                <ChevronLeft className="w-6 h-6" />
+                <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
               </Button>
 
-              {/* Main Image Container */}
+              {/* Main Content Container */}
               <div className="relative w-full">
-                <Image
-                  src={contestSlides[contestSlide].image || "/placeholder.svg"}
-                  alt={contestSlides[contestSlide].title}
-                  width={1000}
-                  height={563}
-                  className="rounded-lg shadow-lg w-full aspect-video object-cover"
-                />
-
-                {/* Overlapping Card */}
-                <Card
-                  className="absolute -right-46 top-3/4 bg-white p-8 shadow-xl max-w-sm z-10 flex flex-col"
-                  style={{ transformOrigin: "top center" }}
-                >
-                  <div className="absolute -top-6 right-40 bg-red-600 text-white rounded-md rotate-45 w-12 h-12 flex items-center justify-center font-bold text-lg text-center">
-                    <span className="-rotate-45 text-center">
-                      {contestSlide + 1}
-                    </span>
+                <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8">
+                  {/* Image */}
+                  <div className="w-full lg:w-2/3">
+                    <Image
+                      src={
+                        contestSlides[contestSlide].image || "/placeholder.svg"
+                      }
+                      alt={contestSlides[contestSlide].title}
+                      width={1000}
+                      height={563}
+                      className="rounded-lg shadow-lg w-full aspect-video object-cover"
+                    />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-blue-900 text-center flex-shrink-0">
-                    {contestSlides[contestSlide].title}
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed text-sm text-center flex-grow">
-                    {contestSlides[contestSlide].description}
-                  </p>
-                </Card>
+
+                  {/* Content Card - Mobile: Below image, Desktop: Overlapping */}
+                  <Card
+                    className="bg-white p-4 sm:p-6 md:p-8 shadow-xl w-full lg:w-1/3 mt-4 lg:mt-0 lg:absolute lg:-right-20 xl:-right-46 lg:top-3/4 z-10 flex flex-col"
+                    style={{ transformOrigin: "top center" }}
+                  >
+                    <div className="absolute -top-4 sm:-top-6 right-4 sm:right-8 lg:right-40 bg-red-600 text-white rounded-md rotate-45 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center font-bold text-sm sm:text-base md:text-lg text-center">
+                      <span className="-rotate-45 text-center">
+                        {contestSlide + 1}
+                      </span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-blue-900 text-center flex-shrink-0">
+                      {contestSlides[contestSlide].title}
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed text-xs sm:text-sm text-center flex-grow">
+                      {contestSlides[contestSlide].description}
+                    </p>
+                  </Card>
+                </div>
               </div>
 
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute -right-24 z-20 bg-white/80 hover:bg-white top-1/2 -translate-y-1/2 p-8 rounded-full"
+                className="absolute -right-8 sm:-right-12 md:-right-16 lg:-right-24 z-20 bg-white/80 hover:bg-white top-1/2 -translate-y-1/2 p-4 sm:p-6 md:p-8 rounded-full hidden sm:flex"
                 onClick={() =>
                   setContestSlide(
                     Math.min(contestSlides.length - 1, contestSlide + 1)
                   )
                 }
               >
-                <ChevronRight className="w-6 h-6" />
+                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
               </Button>
             </div>
 
-            <div className="flex justify-center mt-8 space-x-2">
+            {/* Mobile Navigation Buttons */}
+            <div className="flex justify-center mt-4 space-x-4 sm:hidden">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="bg-white/80 hover:bg-white p-3 rounded-full"
+                onClick={() => setContestSlide(Math.max(0, contestSlide - 1))}
+                disabled={contestSlide === 0}
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="bg-white/80 hover:bg-white p-3 rounded-full"
+                onClick={() =>
+                  setContestSlide(
+                    Math.min(contestSlides.length - 1, contestSlide + 1)
+                  )
+                }
+                disabled={contestSlide === contestSlides.length - 1}
+              >
+                <ChevronRight className="w-4 h-4" />
+              </Button>
+            </div>
+
+            <div className="flex justify-center mt-6 sm:mt-8 space-x-2">
               {contestSlides.map((_, index) => (
                 <button
                   key={index}
@@ -407,7 +427,7 @@ export default function MCCWebsite() {
         {/* Wavy Bottom Border */}
         <div className="absolute -bottom-1 left-0 w-full overflow-hidden">
           <svg
-            className="relative block w-full h-20"
+            className="relative block w-full h-12 sm:h-16 md:h-20"
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
           >
@@ -420,14 +440,14 @@ export default function MCCWebsite() {
       </section>
 
       {/* Games Section */}
-      <section className="relative bg-[#3b82f6] py-12 sm:py-14 md:py-16">
-        <div className="container mx-auto px-24">
-          <div className="text-left mb-8 sm:mb-10 md:mb-12">
-            <h2 className="text-xl sm:text-4xl font-bold text-white mb-2">
+      <section className="relative bg-[#3b82f6] py-8 sm:py-12 md:py-14 lg:py-16">
+        <div className="container mx-auto px-4 sm:px-8 md:px-12 lg:px-24">
+          <div className="text-left mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-white mb-2">
               OUR GAME
             </h2>
             <h1
-              className="text-4xl sm:text-xl md:text-9xl font-bold text-[#feb2da]"
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-9xl font-bold text-[#feb2da]"
               style={{
                 fontFamily: "Impact, sans-serif",
                 WebkitTextStroke: "1px black",
@@ -439,17 +459,17 @@ export default function MCCWebsite() {
           </div>
 
           <div className="relative max-w-6xl mx-auto">
-            {/* Left Arrow */}
+            {/* Desktop Arrow Buttons */}
             <Button
               variant="ghost"
               size="icon"
-              className="absolute -left-4 sm:-left-8 md:-left-20 z-10 bg-white/80 hover:bg-white top-1/2 -translate-y-1/2 p-4 sm:p-6 md:p-8 rounded-full"
+              className="absolute -left-4 sm:-left-8 md:-left-12 lg:-left-16 xl:-left-20 z-10 bg-white/80 hover:bg-white top-1/2 -translate-y-1/2 p-3 sm:p-4 md:p-6 lg:p-8 rounded-full hidden sm:flex"
               onClick={() =>
                 setGamesSlide(Math.max(0, gamesSlide - slidesToShow))
               }
               disabled={gamesSlide === 0}
             >
-              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+              <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
             </Button>
 
             {/* Carousel Grid */}
@@ -462,10 +482,10 @@ export default function MCCWebsite() {
                     href={`/games/${game.slug}`}
                     className="block group"
                   >
-                    <div key={index} className="flex flex-col items-center">
+                    <div className="flex flex-col items-center">
                       <Card
                         className={`bg-blue overflow-hidden relative aspect-[9/16] rounded-xl w-full ${
-                          index % 2 === 1 ? "mt-4" : ""
+                          index % 2 === 1 ? "mt-2 sm:mt-3 md:mt-4" : ""
                         }`}
                       >
                         {/* Background Image using Next.js Image */}
@@ -480,7 +500,7 @@ export default function MCCWebsite() {
                       </Card>
 
                       {/* Game title outside the card */}
-                      <h2 className="font-bold text-sm sm:text-base md:text-lg text-white mt-3 text-center">
+                      <h2 className="font-bold text-xs sm:text-sm md:text-base lg:text-lg text-white mt-2 sm:mt-3 text-center px-1">
                         {game.title}
                       </h2>
                     </div>
@@ -488,11 +508,11 @@ export default function MCCWebsite() {
                 ))}
             </div>
 
-            {/* Right Arrow */}
+            {/* Desktop Right Arrow */}
             <Button
               variant="ghost"
               size="icon"
-              className="absolute -right-4 sm:-right-8 md:-right-20 z-10 bg-white/80 hover:bg-white top-1/2 -translate-y-1/2 p-4 sm:p-6 md:p-8 rounded-full"
+              className="absolute -right-4 sm:-right-8 md:-right-12 lg:-right-16 xl:-right-20 z-10 bg-white/80 hover:bg-white top-1/2 -translate-y-1/2 p-3 sm:p-4 md:p-6 lg:p-8 rounded-full hidden sm:flex"
               onClick={() =>
                 setGamesSlide(
                   Math.min(
@@ -503,10 +523,41 @@ export default function MCCWebsite() {
               }
               disabled={gamesSlide >= gamesSlides.length - slidesToShow}
             >
-              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+              <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
             </Button>
 
-            <div className="flex justify-center mt-6 sm:mt-8 space-x-2">
+            {/* Mobile Navigation Buttons */}
+            <div className="flex justify-center mt-4 space-x-4 sm:hidden">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="bg-white/80 hover:bg-white p-3 rounded-full"
+                onClick={() =>
+                  setGamesSlide(Math.max(0, gamesSlide - slidesToShow))
+                }
+                disabled={gamesSlide === 0}
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="bg-white/80 hover:bg-white p-3 rounded-full"
+                onClick={() =>
+                  setGamesSlide(
+                    Math.min(
+                      gamesSlides.length - slidesToShow,
+                      gamesSlide + slidesToShow
+                    )
+                  )
+                }
+                disabled={gamesSlide >= gamesSlides.length - slidesToShow}
+              >
+                <ChevronRight className="w-4 h-4" />
+              </Button>
+            </div>
+
+            <div className="flex justify-center mt-4 sm:mt-6 lg:mt-8 space-x-2">
               {(() => {
                 const totalDots = Math.ceil(gamesSlides.length / slidesToShow);
 
@@ -518,7 +569,6 @@ export default function MCCWebsite() {
                   );
                   const actualTargetSlide = Math.min(targetSlide, maxSlide);
 
-                  // Fix: Check if current slide matches this dot's target
                   const isActive = gamesSlide === actualTargetSlide;
 
                   return (
@@ -541,7 +591,7 @@ export default function MCCWebsite() {
         {/* Wavy Bottom Border */}
         <div className="absolute -bottom-1 left-0 w-full overflow-hidden">
           <svg
-            className="relative block w-full h-20"
+            className="relative block w-full h-12 sm:h-16 md:h-20"
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
           >
@@ -554,42 +604,27 @@ export default function MCCWebsite() {
       </section>
 
       {/* Merch section */}
-      <section className="relative bg-[#39b5ff] py-24 sm:py-20 md:py-24 min-h-[900px] sm:min-h-[600px] md:min-h-[900px]">
+      <section className="relative bg-[#39b5ff] py-12 sm:py-16 md:py-20 lg:py-24 min-h-[400px] sm:min-h-[600px] md:min-h-[800px] lg:min-h-[1000px] xl:min-h-[1100px]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/merch1.png"
             alt="meow"
             fill
-            className="object-cover"
+            className="object-cover object-center"
             priority
           />
         </div>
 
         {/* Optional overlay to maintain text readability */}
-        <div className="absolute inset-0  z-10"></div>
+        <div className="absolute inset-0 z-10"></div>
 
-        {/* <div className="container flex flex-col mx-auto px-4 relative z-20">
-          <div className="flex flex-col items-center mb-8 sm:mb-12 md:ml-64">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center text-[#1e293b]">
-              Creator Splash Merch
-            </h2>
-          </div>
-        </div> */}
-
-        {/* Wavy Bottom Border */}
-        {/* <div className="absolute -bottom-15 left-0 w-full overflow-hidden z-30">
-          <svg
-            className="relative block w-full h-20 rotate-180"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,60 C300,20 600,100 900,60 C1050,30 1150,80 1200,60 L1200,120 L0,120 Z"
-              fill="#2563eb"
-            />
-          </svg>
-        </div> */}
+        {/* Centered Content Container */}
+        <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
+          <button className="bg-[#f5c1ff] text-[#890279] font-bold uppercase text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg shadow-lg hover:bg-[#e9b2f6] transition-colors text-center max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+            Support your team
+          </button>
+        </div>
       </section>
     </div>
   );

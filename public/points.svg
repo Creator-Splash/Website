@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+	<title>points</title>
+	<defs>
+		<image  width="32" height="32" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IB2cksfwAAAEJQTFRFMzMzOi4uMTEx90A191k1dzsz91Y191c191Q191M190o191A19081900190w190k1Qyws90c190Y190U190M190I1eRUEzQAAABZ0Uk5TFBYV//8e/////////////xf//////+1d9cUAAAEESURBVHicpZABc4IwDIVfjFjZHKI3//8P3E6RORRrxkqhpVS33Y6Wo8nrR0Ie4Y9F/wWIviZWmAow5FeACU1MxMAdEQKJ7kskOgJmbvZxDyvT+OcCoteoi6mXB4CpsUQHsMxvVuc5XHBjkaEFS5dyAi2h4KawginZAQx/74GFiHmgGlBt8CvP9AgAL7Us0ZhNZl84uUhkFKdXSXE2kXnz4uzsGJzklKo+fELl7QqtzvBpz2eUkdXuw1rZs1bVQ4BVvdI1VHJaneQeyD+yMitbK9AGL0UM8Pq4PooLgXgKzou8kAeJBzY4bN775PVgshgA/H1L+B4O2O23b8HEu30M/LimA9/1j3IhQAi4igAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+</svg>
