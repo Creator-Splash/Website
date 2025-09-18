@@ -620,7 +620,7 @@ export default function Events() {
 
         {/* Centered Content Container */}
         <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
-          <button className="bg-[#f5c1ff] text-[#890279] font-bold uppercase text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg shadow-lg hover:bg-[#e9b2f6] transition-colors text-center max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+          <button className="bg-[#fa6e28] text-[#000000] font-bold uppercase text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg shadow-lg hover:bg-[#ff946d] transition-colors text-center max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
             Support your team
           </button>
         </div>
