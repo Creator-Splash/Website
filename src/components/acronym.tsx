@@ -1,11 +1,4 @@
-import {
-  Users,
-  BarChart3,
-  MapPin,
-  Palette,
-  Handshake,
-  Sprout,
-} from "lucide-react";
+import { Palette, Handshake, Sprout } from "lucide-react";
 
 export function DEIAcronymSection() {
   return (

@@ -395,7 +395,7 @@ interface IndividualRowProps {
   gameId: string;
 }
 
-const IndividualRow: React.FC<IndividualRowProps> = ({ player, gameId }) => (
+const IndividualRow: React.FC<IndividualRowProps> = ({ player }) => (
   <div className="flex items-center justify-between p-4 bg-slate-900/70 backdrop-blur-sm rounded-lg mb-3 hover:bg-gray-700/70 transition-all duration-200 group">
     <div className="flex items-center space-x-4">
       <div

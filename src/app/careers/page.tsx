@@ -1,4 +1,3 @@
-import { WorldMapDemo } from "@/components/TeamWorldMap";
 import { DEIAcronymSection } from "@/components/acronym";
 import CareersSection from "@/components/carrier-hero";
 import GenderIdentityChart from "@/components/chart";

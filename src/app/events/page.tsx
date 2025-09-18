@@ -10,7 +10,6 @@ import Link from "next/link";
 export default function Events() {
   const [contestSlide, setContestSlide] = useState(0);
   const [gamesSlide, setGamesSlide] = useState(0);
-  const [merchSlide] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(5);
 
   const storeUrl = "https://creatorsplash-shop.fourthwall.com/";
