@@ -77,11 +77,11 @@ export default function Events() {
       title: "Super Soakers",
       image: "/games/Super_Soakers.svg",
     },
-    {
-      slug: "cloud-riders",
-      title: "Cloud Riders",
-      image: "/games/Cloud_Riders.svg",
-    },
+    // {
+    //   slug: "cloud-riders",
+    //   title: "Cloud Riders",
+    //   image: "/games/Cloud_Riders.svg",
+    // },
     {
       slug: "flight-school",
       title: "Flight School",
@@ -117,11 +117,11 @@ export default function Events() {
       title: "Multiverse",
       image: "/games/Multiverse.svg",
     },
-    {
-      slug: "hunted",
-      title: "Hunted",
-      image: "",
-    },
+    // {
+    //   slug: "hunted",
+    //   title: "Hunted",
+    //   image: "",
+    // },
     {
       slug: "delivery-of-doom",
       title: "Delivery Of Doom",
@@ -457,8 +457,8 @@ export default function Events() {
             </h1>
           </div>
 
-          <div className="relative max-w-6xl mx-auto">
-            {/* Desktop Arrow Buttons */}
+          {/* <div className="relative max-w-6xl mx-auto">
+
             <Button
               variant="ghost"
               size="icon"
@@ -471,7 +471,7 @@ export default function Events() {
               <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
             </Button>
 
-            {/* Carousel Grid */}
+
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-2 md:gap-3">
               {gamesSlides
                 .slice(gamesSlide, gamesSlide + slidesToShow)
@@ -487,7 +487,7 @@ export default function Events() {
                           index % 2 === 1 ? "mt-2 sm:mt-3 md:mt-4" : ""
                         }`}
                       >
-                        {/* Background Image using Next.js Image */}
+
                         <Image
                           src={game.image || "/iamge.svg"}
                           alt=""
@@ -498,7 +498,7 @@ export default function Events() {
                         />
                       </Card>
 
-                      {/* Game title outside the card */}
+
                       <h2 className="font-bold text-xs sm:text-sm md:text-base lg:text-lg text-white mt-2 sm:mt-3 text-center px-1">
                         {game.title}
                       </h2>
@@ -507,7 +507,7 @@ export default function Events() {
                 ))}
             </div>
 
-            {/* Desktop Right Arrow */}
+
             <Button
               variant="ghost"
               size="icon"
@@ -525,7 +525,7 @@ export default function Events() {
               <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
             </Button>
 
-            {/* Mobile Navigation Buttons */}
+
             <div className="flex justify-center mt-4 space-x-4 sm:hidden">
               <Button
                 variant="ghost"
@@ -584,6 +584,41 @@ export default function Events() {
                 });
               })()}
             </div>
+          </div> */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Games Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-3 md:gap-4">
+              {gamesSlides.map((game, index) => (
+                <Link
+                  key={game.slug}
+                  href={`/games/${game.slug}`}
+                  className="block group"
+                >
+                  <div className="flex flex-col items-center">
+                    <Card
+                      className={`bg-blue overflow-hidden relative aspect-[9/16] rounded-xl w-full ${
+                        index % 2 === 1 ? "mt-2 sm:mt-3 md:mt-4" : ""
+                      }`}
+                    >
+                      {/* Background Image using Next.js Image */}
+                      <Image
+                        src={game.image || "/iamge.svg"}
+                        alt=""
+                        fill
+                        className="object-cover rounded-xl"
+                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, (max-width: 1280px) 20vw, 16vw"
+                        unoptimized={true}
+                      />
+                    </Card>
+
+                    {/* Game title outside the card */}
+                    <h2 className="font-bold text-xs sm:text-sm md:text-base lg:text-lg text-white mt-2 sm:mt-3 text-center px-1">
+                      {game.title}
+                    </h2>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -620,9 +655,12 @@ export default function Events() {
 
         {/* Centered Content Container */}
         <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
-          <button className="bg-[#fa6e28] text-[#000000] font-bold uppercase text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg shadow-lg hover:bg-[#ff946d] transition-colors text-center max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
-            Support your team
-          </button>
+          <Link href="https://creatorsplash-shop.fourthwall.com/en-gbp">
+            {" "}
+            <button className="bg-[#fb8246] text-[#000000] font-bold uppercase text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg shadow-lg hover:bg-[#ff946d] transition-colors text-center max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+              Support your team
+            </button>
+          </Link>
         </div>
       </section>
     </div>
