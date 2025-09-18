@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { cn } from "@/lib/utils"; // (Optional) for cleaner class merging
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -15,6 +16,7 @@ export default function Navigation() {
     { href: "/events", label: "EVENTS" },
     { href: "/shop", label: "SHOP" },
     { href: "/careers", label: "Careers" },
+    { href: "/players", label: "players" },
   ];
 
   return (
@@ -50,6 +52,8 @@ export default function Navigation() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-slate-800 transition-colors"
+            aria-label="Toggle mobile menu"
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
@@ -59,23 +63,25 @@ export default function Navigation() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <nav className="lg:hidden py-4 border-t border-slate-700">
-            <div className="flex flex-col space-y-2">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors font-bold text-sm uppercase tracking-wider"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </nav>
-        )}
+        {/* Mobile Navigation - FIXED */}
+        <nav
+          className={`lg:hidden py-4 border-t border-slate-700 transition-all duration-300 ${
+            mobileMenuOpen ? "block" : "hidden"
+          }`}
+        >
+          <div className="flex flex-col space-y-2">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors font-bold text-sm uppercase tracking-wider"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </nav>
       </div>
     </header>
   );
