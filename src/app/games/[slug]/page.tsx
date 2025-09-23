@@ -8,7 +8,7 @@ const games = [
     title: "Super Soakers",
     description:
       "Super Soakers is an action-packed, competitive shooter mixed with strategy and survival. Players gain points upon shooting down floating balloons and killing opposing players using water pistols. Weapons switch every couple of minutes with different damages and ranges. As the match goes on, the border of the map gradually closes and respawn is disabled, putting pressure on the players to fight closer to each other and heightens tension. The teams need to switch between balloon popping and aggressive strategies and survival.",
-    image: "/landscape/2.svg",
+    image: "/SeaRaceway-Done.svg",
     scoring: [{ label: "Teams earn points for eliminations and survival" }],
   },
   {
