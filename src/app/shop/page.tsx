@@ -105,11 +105,6 @@ export default function Shop() {
                     // The 'priority' prop has been removed from here
                   />
                 </div>
-                <div className="absolute inset-0  bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-end">
-                  <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 className="font-semibold text-sm">{item.title}</h3>
-                  </div>
-                </div>
               </div>
             ))}
           </div>

@@ -90,37 +90,37 @@ const Footer = () => {
               <div className="flex flex-row gap-2">
                 <a
                   href="https://discord.gg/Fpa9Ps8NdR"
-                  className="hover:underline"
+                  className="hover:underline hover:text-[#feb4db]"
                 >
                   <FaDiscord />
                 </a>
                 <a
                   href="https://www.twitch.tv/harp6288"
-                  className="hover:underline"
+                  className="hover:underline hover:text-[#feb4db]"
                 >
                   <FaTwitch />
                 </a>
                 <a
                   href="https://x.com/CreatorSplash"
-                  className="hover:underline"
+                  className="hover:underline hover:text-[#feb4db]"
                 >
                   <FaX />
                 </a>
                 <a
                   href="https://www.instagram.com/harp_6288/"
-                  className="hover:underline"
+                  className="hover:underline hover:text-[#feb4db]"
                 >
                   <FaInstagram />
                 </a>
                 <a
                   href="https://www.tiktok.com/@creator.splash"
-                  className="hover:underline"
+                  className="hover:underline hover:text-[#feb4db]"
                 >
                   <FaTiktok />
                 </a>
                 <a
                   href="https://www.youtube.com/@CreatorSplash"
-                  className="hover:underline"
+                  className="hover:underline hover:text-[#feb4db]"
                 >
                   <FaYoutube />
                 </a>
@@ -130,7 +130,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="w-full text-center border-t border-white/20 pt-6">
+        {/* <div className="w-full text-center border-t border-white/20 pt-6">
           <div className="flex flex-wrap justify-center items-center gap-2 mb-2 text-xs">
             <a href="/terms" className="hover:underline">
               Terms of Service
@@ -151,7 +151,7 @@ const Footer = () => {
           <div className="text-xs opacity-80">
             © 2026 Creator Splash. All rights reserved.
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

@@ -66,7 +66,7 @@ export default function Events() {
     {
       title: "The Games",
       description:
-        "Creator Splash brings together eight teams of five creators. Each event features a rotating line-up from thirteen original games, but only nine will be played. To keep things fresh, players participate in a randomized wheel spin to determine which games make it into the voting pool. The games range from aerial combat and underwater salvage to spooky betrayal and much more.",
+        "Creator Splash brings together eight teams of five creators. Each Event features a rotating line-up of 10 original games, but only 7 will be played. To keep things fresh, players participate in a randomized wheel spin to determine which games make it into the voting pool. The games range from aerial combat and underwater salvage to spooky betrayal and much more.",
       image: "/SH05_1.png",
     },
   ];
@@ -596,9 +596,7 @@ export default function Events() {
                 >
                   <div className="flex flex-col items-center">
                     <Card
-                      className={`bg-blue overflow-hidden relative aspect-[9/16] rounded-xl w-full ${
-                        index % 2 === 1 ? "mt-2 sm:mt-3 md:mt-4" : ""
-                      }`}
+                      className={`bg-blue overflow-hidden relative aspect-[9/16] rounded-xl w-full `}
                     >
                       {/* Background Image using Next.js Image */}
                       <Image

@@ -14,7 +14,7 @@ const faqData = [
   {
     question: "What is Creator Splash?",
     answer:
-      "Creator Splash brings together eight teams of five creators. Each event features a rotating line-up from thirteen original games, but only nine will be played. To keep things fresh, players participate in a randomized wheel spin to determine which games make it into the voting pool. The games range from aerial combat and underwater salvage to spooky betrayal and much more. Unlike other events, there is no final game that must be played, and during the final three games, team points are hidden until the end.",
+      "Creator Splash brings together eight teams of five creators. Each Event features a rotating line-up of 10 original games, but only 7 will be played. To keep things fresh, players participate in a randomized wheel spin to determine which games make it into the voting pool. The games range from aerial combat and underwater salvage to spooky betrayal and much more. Unlike other events, there is no final game that must be played, and during the final three games, team points are hidden until the end.",
   },
   {
     question: "Our Mission",

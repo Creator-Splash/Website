@@ -1,7 +1,10 @@
 // components/MemberCard.tsx
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Flag from "react-flagkit";
+import { FaGithub, FaTwitch, FaTwitter, FaDiscord } from "react-icons/fa";
 
 export interface MemberCardProps {
   avatar?: string;
@@ -9,8 +12,13 @@ export interface MemberCardProps {
   role: string;
   country: string;
   countryFlag?: string;
-  description?: string;
-  responsibilities?: string[];
+  bgColor?: string; // 🎨 per person background
+  socials?: {
+    github?: string;
+    twitch?: string;
+    twitter?: string;
+    discord?: string;
+  };
 }
 
 export default function MemberCard({
@@ -19,41 +27,66 @@ export default function MemberCard({
   role,
   country,
   countryFlag,
-  description,
-  responsibilities = [],
+  bgColor = "#1a202c",
+  socials,
 }: MemberCardProps) {
   return (
-    <div className="bg-[#1a202c] text-white rounded-xl p-6 flex flex-col items-center w-full max-w-xs mx-auto">
+    <div
+      className="flex items-center rounded-xl p-4 w-full max-w-md mx-auto shadow-lg"
+      style={{ backgroundColor: bgColor }}
+    >
+      {/* Avatar */}
       {avatar ? (
         <Image
           src={`/heads/${avatar}`}
           alt={name}
-          width={80}
-          height={80}
-          className="rounded-full mb-4 object-cover"
+          width={64}
+          height={64}
+          className="rounded-xl object-cover border-2 border-white shadow-md"
         />
       ) : (
-        <div className="w-20 h-20 rounded-full bg-gray-200 mb-4 flex items-center justify-center text-3xl">
+        <div className="w-16 h-16 rounded-xl bg-gray-200 flex items-center justify-center text-2xl">
           🧑
         </div>
       )}
-      <h3 className="text-xl font-bold mb-1 text-center">{name}</h3>
-      <div className="flex flex-row text-sm text-gray-300 mb-2 text-center ">
-        {role}
-        {countryFlag && (
-          <span className="ml-2 not-emoji-font" title={country}>
-            <Flag country={countryFlag} />
-          </span>
-        )}
+
+      {/* Content */}
+      <div className="ml-4 flex-1">
+        {/* Name + Role */}
+        <h3 className="text-lg font-bold text-white">{name}</h3>
+        <div className="flex items-center text-sm text-gray-200">
+          {role}
+          {countryFlag && (
+            <span className="ml-2" title={country}>
+              <Flag country={countryFlag} />
+            </span>
+          )}
+        </div>
+
+        {/* Social Icons */}
+        <div className="flex space-x-4 mt-2">
+          {socials?.github && (
+            <a href={socials.github} target="_blank" rel="noopener noreferrer">
+              <FaGithub className="text-xl hover:text-gray-300 transition" />
+            </a>
+          )}
+          {socials?.twitter && (
+            <a href={socials.twitter} target="_blank" rel="noopener noreferrer">
+              <FaTwitter className="text-xl hover:text-blue-400 transition" />
+            </a>
+          )}
+          {socials?.twitch && (
+            <a href={socials.twitch} target="_blank" rel="noopener noreferrer">
+              <FaTwitch className="text-xl hover:text-purple-400 transition" />
+            </a>
+          )}
+          {socials?.discord && (
+            <a href={socials.discord} target="_blank" rel="noopener noreferrer">
+              <FaDiscord className="text-xl hover:text-indigo-400 transition" />
+            </a>
+          )}
+        </div>
       </div>
-      {description && (
-        <p className="text-gray-200 text-center mb-2">{description}</p>
-      )}
-      <ul className="text-gray-500 text-sm list-disc list-inside text-left">
-        {responsibilities.map((item, idx) => (
-          <li key={idx}>{item}</li>
-        ))}
-      </ul>
     </div>
   );
 }

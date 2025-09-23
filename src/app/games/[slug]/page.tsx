@@ -7,9 +7,9 @@ const games = [
     slug: "super-soakers",
     title: "Super Soakers",
     description:
-      "Super Soakers is an action-packed, competitive shooter mixed with strategy and survival. Players gain coins upon shooting down floating balloons and killing opposing players using water pistols. Weapons switch every couple of minutes with different damages and ranges. As the match goes on, the border of the map gradually closes and respawn is disabled, putting pressure on the players to fight closer to each other and heightens tension. The teams need to switch between balloon popping and aggressive strategies and survival.",
+      "Super Soakers is an action-packed, competitive shooter mixed with strategy and survival. Players gain points upon shooting down floating balloons and killing opposing players using water pistols. Weapons switch every couple of minutes with different damages and ranges. As the match goes on, the border of the map gradually closes and respawn is disabled, putting pressure on the players to fight closer to each other and heightens tension. The teams need to switch between balloon popping and aggressive strategies and survival.",
     image: "/landscape/2.svg",
-    scoring: [{ label: "Teams earn coins for eliminations and survival" }],
+    scoring: [{ label: "Teams earn points for eliminations and survival" }],
   },
   {
     slug: "cloud-riders",
@@ -17,7 +17,7 @@ const games = [
     description:
       "Teams spawn into the sky on floating clouds and fight to be the last team standing. Players collect gear from chests scattered across sky islands and eliminate enemy players in a fast-paced, one-life battle.Touching the ground removes your cloud until you're airborne again. The world border shrinks over time, forcing players into closer combat.",
     image: "/landscape/8.svg",
-    scoring: [{ label: "Teams earn coins for eliminations and survival" }],
+    scoring: [{ label: "Teams earn points for eliminations and survival" }],
   },
   {
     slug: "flight-school",
@@ -54,7 +54,7 @@ const games = [
     scoring: [
       {
         label:
-          "Teams earn coins for completing repairs and surviving until the timer ends.",
+          "Teams earn points for completing repairs and surviving until the timer ends.",
       },
     ],
   },
@@ -62,7 +62,7 @@ const games = [
     slug: "nemesis-rising",
     title: "Nemesis Rising",
     description:
-      "Nemesis Rising is the traditional Boss Battle game with a huge twist. Teams are assigned to different maps, with each of them having a customized mob boss. The more powerful a team's current standing, the more powerful the boss they have to fight. There are 3 lives for every player to defeat their respective boss. Less powerful bosses reward more coins, providing lower-scoring teams an opportunity to catch up. There are 45 different mob bosses players can face with a wide variety of attacks.",
+      "Nemesis Rising is the traditional Boss Battle game with a huge twist. Teams are assigned to different maps, with each of them having a customized mob boss. The more powerful a team's current standing, the more powerful the boss they have to fight. There are 3 lives for every player to defeat their respective boss. Less powerful bosses reward more points, providing lower-scoring teams an opportunity to catch up. There are 45 different mob bosses players can face with a wide variety of attacks.",
     image: "/landscape/6.svg",
     scoring: [],
   },
@@ -75,7 +75,7 @@ const games = [
     scoring: [
       {
         label:
-          "Coins are awarded based on placement and time. Bonuses for clean runs and hazard avoidance.",
+          "points are awarded based on placement and time. Bonuses for clean runs and hazard avoidance.",
       },
     ],
   },
@@ -128,7 +128,7 @@ const games = [
     image: "/landscape/Delivery_Of_Doom.png",
     scoring: [
       {
-        label: "Teams earn coins for each correctly delivered package.",
+        label: "Teams earn points for each correctly delivered package.",
       },
       {
         label: "Light package: +5 points",
@@ -201,7 +201,7 @@ export default async function GamePage({
       <div>
         <h2 className="text-2xl font-bold mb-4 text-gray-900">Scoring</h2>
         <p className="text-gray-700 mb-4">
-          Coins are awarded for eliminations and capturing the objective.
+          points are awarded for eliminations and capturing the objective.
         </p>
 
         <ul className="space-y-2">
