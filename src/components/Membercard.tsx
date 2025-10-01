@@ -23,37 +23,50 @@ export default function MemberCard({
   responsibilities = [],
 }: MemberCardProps) {
   return (
-    <div className="bg-[#101010] text-white rounded-xl p-6 flex flex-col items-center w-full max-w-xs mx-auto">
-      {avatar ? (
-        <Image
-          src={`/heads/${avatar}`}
-          alt={name}
-          width={80}
-          height={80}
-          className="rounded-full mb-4 object-cover"
-        />
-      ) : (
-        <div className="w-20 h-20 rounded-full bg-gray-200 mb-4 flex items-center justify-center text-3xl">
-          🧑
+    <div className="bg-[#101010] text-white rounded-xl p-6 flex flex-row items-center w-full max-w-3xl mx-auto">
+      {/* Avatar + Name (centered vertically) */}
+      <div className="flex flex-col items-center justify-center w-32">
+        {avatar ? (
+          <Image
+            src={`/heads/${avatar}`}
+            alt={name}
+            width={70}
+            height={70}
+            className="rounded-full object-cover"
+          />
+        ) : (
+          <div className="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center text-3xl">
+            🧑
+          </div>
+        )}
+        <div className="flex flex-row">
+          <h3 className="text-xl font-bold -mt-2 text-center">{name}</h3>
+          <div className="flex flex-row text-sm text-gray-300 mb-2 text-center ">
+
+            {countryFlag && (
+              <span className="ml-2 not-emoji-font" title={country}>
+                <Flag country={countryFlag} />
+              </span>
+            )}
+          </div>
+
+          
         </div>
-      )}
-      <h3 className="text-xl font-bold mb-1 text-center">XYZ</h3>
-      {/* <div className="flex flex-row text-sm text-gray-300 mb-2 text-center ">
         {role}
-        {countryFlag && (
-          <span className="ml-2 not-emoji-font" title={country}>
-            <Flag country={countryFlag} />
-          </span>
+      </div>
+
+      {/* Text content */}
+      <div className="flex-1 ml-6">
+        {description && <p className="text-gray-200 mb-2">{description}</p>}
+
+        {responsibilities.length > 0 && (
+          <ul className="text-gray-500 text-sm list-disc list-inside">
+            {responsibilities.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
         )}
       </div>
-      {description && (
-        <p className="text-gray-200 text-center mb-2">{description}</p>
-      )}
-      <ul className="text-gray-500 text-sm list-disc list-inside text-left">
-        {responsibilities.map((item, idx) => (
-          <li key={idx}>{item}</li>
-        ))}
-      </ul> */}
     </div>
   );
 }

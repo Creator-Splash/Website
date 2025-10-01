@@ -5,7 +5,7 @@ import { teamMembers } from "@/data";
 export default function Creatorsplash() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-[#1a202c] p-4">
-      <div className="container mx-auto max-w-4xl text-center">
+      {/* <div className="container mx-auto text-center">
         <h1 className="text-5xl lg:text-6xl font-black text-white mb-6 animate-fade-in">
           <span className="font-[cursive]">ℂ𝕣𝕖𝕒𝕥𝕠𝕣 𝕊𝕡𝕝𝕒𝕤𝕙 </span>
         </h1>
@@ -14,20 +14,22 @@ export default function Creatorsplash() {
           updates and information about our creators and their amazing work.
         </p>
       </div>
+
       <div className="flex flex-col items-center text-3xl lg:text-4xl font-black text-white mb-6 animate-fade-in">
         <h2>Meet Our Team</h2>
-      </div>
+      </div> */}
+
       <div
         className="
           grid
           grid-cols-1
           sm:grid-cols-2
-          md:grid-cols-3
-          lg:grid-cols-4
+          md:grid-cols-2
+          lg:grid-cols-3
           gap-8
+          max-w-7xl
           w-full
-          max-w-6xl
-          mb-16
+          m-16
         "
       >
         {teamMembers.map((member, idx) => (

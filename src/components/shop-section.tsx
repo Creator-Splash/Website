@@ -1,0 +1,124 @@
+import React from "react";
+import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ShoppingCart } from "lucide-react";
+
+interface FeatureCardProps {
+  title: string;
+  description: string;
+}
+
+const FeatureCard: React.FC<FeatureCardProps> = ({ title, description }) => (
+  <Card className="overflow-hidden border-0 shadow-lg py-0 bg-white">
+    <div className="aspect-video relative  ">
+      <Image src="/placeholder.svg" alt={title} fill className="object-cover" />
+      <div className="absolute top-0 left-0 w-8 h-8 rotate-45 bg-yellow-400 rounded-full flex items-center justify-center">
+        <span className="text-purple-600 font-bold text-sm rotate-45">+</span>
+      </div>
+    </div>
+    <CardContent className="p-4">
+      <h3 className="text-gray-800 font-bold text-lg mb-2">{title}</h3>
+      <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
+    </CardContent>
+  </Card>
+);
+
+interface PricingCardProps {
+  days: number;
+  price: number;
+  type: string;
+}
+
+const PricingCard: React.FC<PricingCardProps> = ({ days, price, type }) => (
+  <div className="text-center">
+    <div className="text-gray-800 font-bold text-lg mb-1">
+      {days} Days ({type})
+    </div>
+    <div className="text-4xl font-bold text-gray-900 mb-4">${price}</div>
+    <Button className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3">
+      <ShoppingCart className="w-4 h-4 mr-2" />
+      {type === "Auto-Renew" ? "SUBSCRIBE" : "ADD TO CART"}
+    </Button>
+  </div>
+);
+
+export default function MCCPlusSection() {
+  const features = [
+    {
+      title: "Feature One",
+      description: "This is just some test description for feature one.",
+    },
+    {
+      title: "Feature Two",
+      description: "Another placeholder description for feature two.",
+    },
+    {
+      title: "Feature Three",
+      description: "Testing description content for feature three.",
+    },
+    {
+      title: "Feature Four",
+      description: "Dummy description text for feature four.",
+    },
+    {
+      title: "Feature Five",
+      description: "This is just filler text for testing feature five.",
+    },
+    {
+      title: "Feature Six",
+      description: "Some test description goes here for feature six.",
+    },
+    {
+      title: "Feature Seven",
+      description: "Example placeholder for feature seven’s description.",
+    },
+    {
+      title: "Feature Eight",
+      description: "Test description text for feature eight.",
+    },
+    {
+      title: "Feature Nine",
+      description: "Here’s some dummy content for feature nine.",
+    },
+    {
+      title: "Feature Ten",
+      description: "Final test description for feature ten.",
+    },
+  ];
+
+  return (
+    <section className="bg-white flex flex-col items-center justify-center">
+      <div className="max-w-7xl">
+        {" "}
+        {/* Purple Banner */}
+        <div className="bg-gradient-to-r py-16 px-4 rounded-2xl">
+          <div className="text-center">
+            <div className=" rounded-xl mx-auto mb-6 flex items-center justify-center">
+             <Image src="/mug.svg" alt="mug" width={128} height={128} />
+            </div>
+          </div>
+        </div>
+        {/* Features Grid */}
+        <div className="px-4 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+            {features.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                title={feature.title}
+                description={feature.description}
+              />
+            ))}
+          </div>
+
+          {/* Pricing */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <PricingCard days={30} price={7.69} type="Auto-Renew" />
+            <PricingCard days={90} price={19.99} type="Top-Up" />
+            <PricingCard days={360} price={76.79} type="Top-Up" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

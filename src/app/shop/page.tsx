@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import MCCShopSection from "@/components/shop-section";
 
 export default function Shop() {
   // Sample merch data - replace with your actual images
@@ -118,6 +119,7 @@ export default function Shop() {
           </div>
         </div>
       </section>
+      <MCCShopSection />
     </>
   );
 }

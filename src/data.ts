@@ -1,4 +1,5 @@
 // data/team.ts
+// data/team.ts
 export const teamMembers = [
   // Owner
   {
@@ -37,8 +38,16 @@ export const teamMembers = [
     ],
   },
   {
-    name: "Emily",
+    name: "Seapeekay",
     avatar: "Axolotl_4.png",
+    role: "Roster Manager+",
+    country: "United Kingdom",
+    countryFlag: "GB",
+    responsibilities: ["Roster Support", "Voice Acting", "Modeling"],
+  },
+  {
+    name: "Emily",
+    avatar: "Axolotl_5.png",
     role: "Tester Manager",
     country: "America",
     countryFlag: "US",
@@ -48,7 +57,7 @@ export const teamMembers = [
   // Discord Staff Team
   {
     name: "Fridge",
-    avatar: "Axolotl_5.png",
+    avatar: "Axolotl_6.png",
     role: "Discord Staff",
     country: "America",
     countryFlag: "US",
@@ -56,7 +65,7 @@ export const teamMembers = [
   },
   {
     name: "AgentOfLore",
-    avatar: "Axolotl_6.png",
+    avatar: "Axolotl_7.png",
     role: "Discord Staff",
     country: "Australia",
     countryFlag: "AU",
@@ -64,7 +73,7 @@ export const teamMembers = [
   },
   {
     name: "Mizzen",
-    avatar: "Axolotl_7.png",
+    avatar: "Axolotl_8.png",
     role: "Discord Staff",
     country: "Coming soon",
     countryFlag: "",
@@ -74,7 +83,7 @@ export const teamMembers = [
   // Event Staff Team
   {
     name: "Poke",
-    avatar: "Axolotl_8.png",
+    avatar: "Axolotl_9.png",
     role: "Event Staff",
     country: "America",
     countryFlag: "US",
@@ -82,15 +91,15 @@ export const teamMembers = [
   },
   {
     name: "Jordan",
-    avatar: "Axolotl_9.png",
+    avatar: "Axolotl_10.png",
     role: "Event Staff",
     country: "America",
     countryFlag: "US",
-    responsibilities: ["Event Moderator", "Team Logo Designer", "Event Artist"],
+    responsibilities: ["Event Moderator"],
   },
   {
     name: "Stardust",
-    avatar: "Axolotl_10.png",
+    avatar: "Axolotl_11.png",
     role: "Event Staff",
     country: "Sweden",
     countryFlag: "SE",
@@ -98,7 +107,7 @@ export const teamMembers = [
   },
   {
     name: "Onyx",
-    avatar: "Axolotl_11.png",
+    avatar: "Axolotl_12.png",
     role: "Event Staff",
     country: "Slovakia",
     countryFlag: "SK",
@@ -106,14 +115,6 @@ export const teamMembers = [
   },
   {
     name: "Ashlyn",
-    avatar: "Axolotl_12.png",
-    role: "Event Staff",
-    country: "United Kingdom",
-    countryFlag: "GB",
-    responsibilities: ["Event Moderator"],
-  },
-  {
-    name: "Cutie",
     avatar: "Axolotl_13.png",
     role: "Event Staff",
     country: "United Kingdom",
@@ -121,7 +122,7 @@ export const teamMembers = [
     responsibilities: ["Event Moderator"],
   },
   {
-    name: "DatKid",
+    name: "Cutie",
     avatar: "Axolotl_14.png",
     role: "Event Staff",
     country: "United Kingdom",
@@ -129,8 +130,16 @@ export const teamMembers = [
     responsibilities: ["Event Moderator"],
   },
   {
-    name: "Layton",
+    name: "DatKid",
     avatar: "Axolotl_15.png",
+    role: "Event Staff",
+    country: "United Kingdom",
+    countryFlag: "GB",
+    responsibilities: ["Event Moderator"],
+  },
+  {
+    name: "Layton",
+    avatar: "Axolotl_16.png",
     role: "Event Staff",
     country: "United Kingdom",
     countryFlag: "GB",
@@ -140,31 +149,55 @@ export const teamMembers = [
   // Devs Dept
   {
     name: "KingCat",
-    avatar: "Axolotl_16.png",
+    avatar: "Axolotl_17.png",
     role: "Core Dev",
     country: "America",
     countryFlag: "US",
     responsibilities: ["Core Developer"],
   },
   {
-    name: "Encighted Orange",
-    avatar: "Axolotl_17.png",
+    name: "Elongated Orange",
+    avatar: "Axolotl_18.png",
     role: "Game Dev",
     country: "United Kingdom",
     countryFlag: "GB",
     responsibilities: ["Game Developer"],
   },
   {
-    name: "Comba",
-    avatar: "Axolotl_18.png",
+    name: "gufl",
+    avatar: "Axolotl_19.png",
     role: "Game Dev",
-    country: "Germany",
-    countryFlag: "DE",
+    country: "America",
+    countryFlag: "US",
     responsibilities: ["Game Developer"],
   },
   {
-    name: "Mio",
-    avatar: "Axolotl_19.png",
+    name: "F0b1x",
+    avatar: "Axolotl_20.png",
+    role: "Game Dev",
+    country: "America",
+    countryFlag: "US",
+    responsibilities: ["Game Developer"],
+  },
+  {
+    name: "Aiden",
+    avatar: "Axolotl_21.png",
+    role: "Game Dev",
+    country: "America",
+    countryFlag: "US",
+    responsibilities: ["Game Developer"],
+  },
+  {
+    name: "Street",
+    avatar: "Axolotl_22.png",
+    role: "Animation Dev",
+    country: "Spain",
+    countryFlag: "ES",
+    responsibilities: ["Animator / Developer"],
+  },
+  {
+    name: "Milo",
+    avatar: "Axolotl_23.png",
     role: "Website Dev",
     country: "India",
     countryFlag: "IN",
@@ -174,23 +207,23 @@ export const teamMembers = [
   // Artists Dept
   {
     name: "Boss Isaz",
-    avatar: "Axolotl_20.png",
+    avatar: "Axolotl_24.png",
     role: "Texture Pack Artist",
     country: "France",
     countryFlag: "FR",
-    responsibilities: ["Creator Splash Texture Artist"],
+    responsibilities: ["Texture Pack Artist"],
   },
   {
-    name: "Nohmann",
-    avatar: "Axolotl_21.png",
-    role: "Mobs/Weapons Artist",
-    country: "Ukraine",
-    countryFlag: "UA",
-    responsibilities: ["Mobs and Weapons Artist"],
+    name: "Rhais",
+    avatar: "Axolotl_25.png",
+    role: "Block Entity Artist",
+    country: "Russia",
+    countryFlag: "RU",
+    responsibilities: ["Block Entity Artist"],
   },
   {
     name: "WinterStory",
-    avatar: "Axolotl_22.png",
+    avatar: "Axolotl_26.png",
     role: "Weapons Artist",
     country: "Slovakia",
     countryFlag: "SK",
@@ -198,7 +231,7 @@ export const teamMembers = [
   },
   {
     name: "Arlan",
-    avatar: "Axolotl_23.png",
+    avatar: "Axolotl_27.png",
     role: "Armour Artist",
     country: "Brazil",
     countryFlag: "BR",
@@ -206,26 +239,123 @@ export const teamMembers = [
   },
   {
     name: "Gonzalo",
-    avatar: "Axolotl_24.png",
+    avatar: "Axolotl_28.png",
     role: "Logo Artist",
     country: "Argentina",
     countryFlag: "AR",
     responsibilities: ["Logo Artist"],
   },
-
-  // Community Management (moved to match Discord order)
   {
-    name: "J48",
-    avatar: "Axolotl_25.png", // Will need to be assigned from remaining images
-    role: "Community Manager",
-    country: "Syria",
-    countryFlag: "SY",
-    responsibilities: [
-      "Head of Community Relations",
-      "Head of Sponsorships",
-      "Player Roster Help",
-      "Social Media Helper",
-    ],
+    name: "Danny Pistachio",
+    avatar: "Axolotl_29.png",
+    role: "Logo Artist",
+    country: "Canada",
+    countryFlag: "CA",
+    responsibilities: ["Logo Artist"],
+  },
+
+  // Video Dept
+  {
+    name: "Satim",
+    avatar: "Axolotl_30.png",
+    role: "Animator",
+    country: "Algeria",
+    countryFlag: "DZ",
+    responsibilities: ["Animator"],
+  },
+
+  // Music Dept
+  {
+    name: "WillOWisp prod.",
+    avatar: "Axolotl_31.png",
+    role: "Music Producer",
+    country: "Greece",
+    countryFlag: "GR",
+    responsibilities: ["Music Production"],
+  },
+  {
+    name: "Turlough",
+    avatar: "Axolotl_32.png",
+    role: "Music Producer",
+    country: "New Zealand",
+    countryFlag: "NZ",
+    responsibilities: ["Music Production"],
+  },
+  {
+    name: "inod Studio",
+    avatar: "Axolotl_33.png",
+    role: "Music Producer",
+    country: "Indonesia",
+    countryFlag: "ID",
+    responsibilities: ["Music Production"],
+  },
+
+  // Voice Dept
+  {
+    name: "Seapeekay",
+    avatar: "Axolotl_34.png",
+    role: "Voice Actor",
+    country: "United Kingdom",
+    countryFlag: "GB",
+    responsibilities: ["Voice Acting"],
+  },
+  {
+    name: "Talenthia R.",
+    avatar: "Axolotl_35.png",
+    role: "Voice Actor",
+    country: "America",
+    countryFlag: "US",
+    responsibilities: ["Voice Acting"],
+  },
+  {
+    name: "Evelynn/Kaboodle",
+    avatar: "Axolotl_36.png",
+    role: "Voice Actor",
+    country: "Australia",
+    countryFlag: "AU",
+    responsibilities: ["Voice Acting"],
+  },
+  {
+    name: "Holly Lindin",
+    avatar: "Axolotl_37.png",
+    role: "Voice Actor",
+    country: "America",
+    countryFlag: "US",
+    responsibilities: ["Voice Acting"],
+  },
+
+  // Model Dept
+  {
+    name: "KatieGoBrr",
+    avatar: "Axolotl_38.png",
+    role: "Model",
+    country: "United Kingdom",
+    countryFlag: "GB",
+    responsibilities: ["Model Designer"],
+  },
+  {
+    name: "Seapeekay",
+    avatar: "Axolotl_39.png",
+    role: "Model",
+    country: "United Kingdom",
+    countryFlag: "GB",
+    responsibilities: ["Model Designer"],
+  },
+  {
+    name: "Alina/Egg",
+    avatar: "Axolotl_40.png",
+    role: "Model",
+    country: "United Kingdom",
+    countryFlag: "GB",
+    responsibilities: ["Model Designer"],
+  },
+  {
+    name: "Ambear",
+    avatar: "Axolotl_41.png",
+    role: "Model",
+    country: "Belgium",
+    countryFlag: "BE",
+    responsibilities: ["Model Designer"],
   },
 ];
 
@@ -268,19 +398,22 @@ export const getFlagEmoji = (countryCode: string): string => {
     US: "🇺🇸",
     AU: "🇦🇺",
     FR: "🇫🇷",
-    SY: "🇸🇾",
     SE: "🇸🇪",
     SK: "🇸🇰",
-    ID: "🇮🇩",
-    GR: "🇬🇷",
-    DE: "🇩🇪",
     IN: "🇮🇳",
-    UA: "🇺🇦",
     BR: "🇧🇷",
     AR: "🇦🇷",
     CA: "🇨🇦",
     DZ: "🇩🇿",
     NZ: "🇳🇿",
+    ID: "🇮🇩",
+    GR: "🇬🇷",
+    DE: "🇩🇪",
+    UA: "🇺🇦",
+    SY: "🇸🇾",
+    RU: "🇷🇺", // Russia
+    ES: "🇪🇸", // Spain
+    BE: "🇧🇪", // Belgium
   };
   return flags[countryCode] || "🏳️";
 };
