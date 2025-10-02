@@ -71,7 +71,7 @@ export default function MCCPlusSection() {
     },
     {
       title: "Feature Seven",
-      description: "Example placeholder for feature seven’s description.",
+      description: "Example placeholder for feature seven's description.",
     },
     {
       title: "Feature Eight",
@@ -79,7 +79,7 @@ export default function MCCPlusSection() {
     },
     {
       title: "Feature Nine",
-      description: "Here’s some dummy content for feature nine.",
+      description: "Here's some dummy content for feature nine.",
     },
     {
       title: "Feature Ten",
@@ -87,15 +87,72 @@ export default function MCCPlusSection() {
     },
   ];
 
+  // Hardcoded positions for left side axolotls
+  const leftAxolotls = [
+    { num: 1, top: 5, left: 2, rotation: -15 },
+    { num: 2, top: 30, left: 15, rotation: 5 },
+    { num: 8, top: 50, left: 2, rotation: 18 },
+    { num: 9, top: 5, left: 25, rotation: 15 },
+    { num: 14, top: 50, left: 25, rotation: -15 },
+  ];
+
+  // Hardcoded positions for right side axolotls
+  const rightAxolotls = [
+    { num: 15, top: 5, right: 2, rotation: 15 },
+    { num: 17, top: 30, right: 15, rotation: -5 },
+    { num: 18, top: 50, right: 2, rotation: -18 },
+    { num: 24, top: 5, right: 25, rotation: -15 },
+    { num: 22, top: 50, right: 25, rotation: 5 },
+  ];
+
   return (
     <section className="bg-white flex flex-col items-center justify-center">
       <div className="max-w-7xl">
-        {" "}
         {/* Purple Banner */}
-        <div className="bg-gradient-to-r py-16 px-4 rounded-2xl">
+        <div className="bg-gradient-to-r py-16 px-4 rounded-2xl relative overflow-hidden">
           <div className="text-center">
-            <div className=" rounded-xl mx-auto mb-6 flex items-center justify-center">
-             <Image src="/mug.svg" alt="mug" width={128} height={128} />
+            <div className="rounded-xl mx-auto mb-6 flex items-center justify-center relative">
+              <Image
+                src="/mug.svg"
+                alt="mug"
+                width={420}
+                height={800}
+                className="relative z-10"
+              />
+
+              {/* Left side axolotls */}
+              {leftAxolotls.map((axolotl) => (
+                <Image
+                  key={`left-${axolotl.num}`}
+                  src={`/heads/Axolotl_${axolotl.num}.png`}
+                  alt="axolotl"
+                  width={200}
+                  height={120}
+                  className="absolute opacity-80 "
+                  style={{
+                    transform: `rotate(${axolotl.rotation}deg)`,
+                    top: `${axolotl.top}%`,
+                    left: `${axolotl.left}%`,
+                  }}
+                />
+              ))}
+
+              {/* Right side axolotls */}
+              {rightAxolotls.map((axolotl) => (
+                <Image
+                  key={`right-${axolotl.num}`}
+                  src={`/heads/Axolotl_${axolotl.num}.png`}
+                  alt="axolotl"
+                  width={200}
+                  height={120}
+                  className="absolute opacity-80"
+                  style={{
+                    transform: `rotate(${axolotl.rotation}deg)`,
+                    top: `${axolotl.top}%`,
+                    right: `${axolotl.right}%`,
+                  }}
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -112,11 +169,11 @@ export default function MCCPlusSection() {
           </div>
 
           {/* Pricing */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <PricingCard days={30} price={7.69} type="Auto-Renew" />
             <PricingCard days={90} price={19.99} type="Top-Up" />
             <PricingCard days={360} price={76.79} type="Top-Up" />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
