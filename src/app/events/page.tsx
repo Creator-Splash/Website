@@ -115,7 +115,7 @@ export default function Events() {
     {
       slug: "multiverse",
       title: "Multiverse",
-      image: "/games/Multiverse.svg",
+      image: "/placeholder.svg",
     },
     // {
     //   slug: "hunted",
@@ -125,12 +125,12 @@ export default function Events() {
     {
       slug: "delivery-of-doom",
       title: "Delivery Of Doom",
-      image: "",
+      image: "/placeholder.svg",
     },
     {
       slug: "redacted",
       title: " [REDACTED]",
-      image: "",
+      image: "/placeholder.svg",
     },
   ];
 
@@ -587,7 +587,7 @@ export default function Events() {
           </div> */}
           <div className="relative max-w-6xl mx-auto">
             {/* Games Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-3 md:gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-2 sm:gap-3 md:gap-4">
               {gamesSlides.map((game, index) => (
                 <Link
                   key={game.slug}
