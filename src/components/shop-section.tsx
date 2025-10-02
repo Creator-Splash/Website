@@ -108,9 +108,8 @@ export default function MCCPlusSection() {
 
   return (
     <>
-
       <section className="bg-white flex flex-col items-center justify-center">
-        <div className="max-w-7xl">
+        <div className="max-w-7xl w-full">
           {/* Purple Banner */}
           <div className="bg-gradient-to-r py-16 px-4 rounded-2xl relative overflow-hidden">
             <div className="text-center">
@@ -119,7 +118,6 @@ export default function MCCPlusSection() {
                   href="https://creatorsplash-shop.fourthwall.com/en-gbp/products/axolotl-mug"
                   target="_blank"
                 >
-                  {" "}
                   <Image
                     src="/mug.svg"
                     alt="mug"
@@ -137,7 +135,7 @@ export default function MCCPlusSection() {
                     alt="axolotl"
                     width={200}
                     height={120}
-                    className="absolute opacity-80 "
+                    className="absolute opacity-80"
                     style={{
                       transform: `rotate(${axolotl.rotation}deg)`,
                       top: `${axolotl.top}%`,
@@ -165,25 +163,30 @@ export default function MCCPlusSection() {
               </div>
             </div>
           </div>
-          {/* Features Grid */}
-          <div className="px-4 py-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
-              {features.map((feature, index) => (
-                <FeatureCard
-                  key={index}
-                  title={feature.title}
-                  description={feature.description}
-                />
-              ))}
-            </div>
+        </div>
+      </section>
 
-            {/* Pricing */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <section className="bg-white flex flex-col items-center justify-center px-4 py-8">
+        <div className="max-w-7xl w-full">
+          {/* FeatureCard Section - COMMENTED OUT */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+            {/*
+      {features.map((feature, index) => (
+        <FeatureCard
+          key={index}
+          title={feature.title}
+          description={feature.description}
+        />
+      ))}
+      */}
+          </div>
+
+          {/* Pricing Cards */}
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <PricingCard days={30} price={7.69} type="Auto-Renew" />
             <PricingCard days={90} price={19.99} type="Top-Up" />
             <PricingCard days={360} price={76.79} type="Top-Up" />
-          </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </>
