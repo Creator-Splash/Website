@@ -24,16 +24,16 @@ export default function Shop() {
       title: "Product Name 3",
     },
     {
-      id: "team-octopus-shirt",
-      src: "/merch/item4.png",
-      alt: "Merch Item 4",
-      title: "Product Name 4",
-    },
-    {
       id: "team-jellyfish-shirt",
       src: "/merch/item5.png",
       alt: "Merch Item 5",
       title: "Product Name 5",
+    },
+    {
+      id: "team-octopus-shirt",
+      src: "/merch/item4.png",
+      alt: "Merch Item 5",
+      title: "Product Name 4",
     },
     {
       id: "team-stingray-shirt",
