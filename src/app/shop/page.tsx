@@ -132,7 +132,7 @@ export default function Shop() {
             {merchItems.map((item) => (
               <div
                 key={item.id}
-                className="group relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="group relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.05]"
               >
                 <Link
                   href={`https://creatorsplash-shop.fourthwall.com/en-gbp/products/${item.id}`}
@@ -144,7 +144,7 @@ export default function Shop() {
                       src={item.src}
                       alt={item.alt}
                       fill
-                      className="object-cover object-center z-10"
+                      className="object-cover object-center z-10 transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
                 </Link>
@@ -175,7 +175,7 @@ export default function Shop() {
             width={300}
             height={80}
             alt="Axolotl"
-            className="rounded-lg"
+            className="rounded-lg transition-all duration-300 hover:scale-[1.05]"
           />
         </div>
 
@@ -198,7 +198,7 @@ export default function Shop() {
               width={380}
               height={240}
               alt="sticker 1"
-              className="rounded-2xl cursor-pointer"
+              className="rounded-2xl cursor-pointer transition-all duration-300 hover:scale-[1.05]"
             />
           </Link>
           <Link
@@ -211,7 +211,7 @@ export default function Shop() {
               width={400}
               height={240}
               alt="sticker 2"
-              className="rounded-2xl cursor-pointer"
+              className="rounded-2xl cursor-pointer transition-all duration-300 hover:scale-[1.05]"
             />
           </Link>
         </div>

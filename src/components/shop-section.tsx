@@ -123,7 +123,7 @@ export default function MCCPlusSection() {
                     alt="mug"
                     width={420}
                     height={800}
-                    className="relative z-10"
+                    className="relative z-10 transition-all duration-300 hover:scale-[1.05]"
                   />
                 </Link>
 
