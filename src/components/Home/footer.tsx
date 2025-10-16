@@ -1,19 +1,19 @@
 import Image from "next/image";
 import {
-  FaDiscord,
-  FaInstagram,
-  FaTiktok,
-  FaTwitch,
-  FaX,
-  FaYoutube,
+    FaDiscord,
+    FaInstagram,
+    FaTiktok,
+    FaTwitch,
+    FaX,
+    FaYoutube,
 } from "react-icons/fa6";
 
 const Footer = () => {
-  return (
-    <footer className="bg-[#0F4C5C] text-white w-full font-sans py-8">
-      <div className="max-w-[1200px] mx-auto px-4">
-        {/* Social Icons */}
-        {/* <div className="flex justify-center gap-4 mb-8">
+    return (
+        <footer className="bg-[#0F4C5C] text-white w-full font-sans py-8">
+            <div className="max-w-[1200px] mx-auto px-4">
+                {/* Social Icons */}
+                {/* <div className="flex justify-center gap-4 mb-8">
           <a
             href="https://youtube.com/@creatorsplash?si=D23xBsHPxKg64dgf"
             className="w-[45px] h-[45px] rounded-full flex items-center justify-center bg-[#FF0000] hover:-translate-y-0.5 hover:opacity-80 transition"
@@ -61,76 +61,80 @@ const Footer = () => {
           </a>
         </div> */}
 
-        {/* Main Footer Content */}
-        <div className="flex flex-col md:flex-row justify-between items-start w-full mb-8 gap-8 mt-8">
-          <div className="flex flex-col md:flex-row gap-6 items-center md:items-start flex-1 max-w-[800px]">
-            <div className=" flex items-center justify-center flex-shrink-0">
-              <Image
-                src="/logo.png"
-                alt="Creator Splash"
-                className="object-cover"
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className="flex-1">
-              <p className="leading-relaxed text-sm md:text-base">
-                Launched in 2026, Creator Splash has been crafting standout
-                Minecraft events that bring the community together through
-                creativity, competition, and collaboration. With each event, we
-                unite creators and fans from around the world to celebrate the
-                best of Minecraft from innovative game modes to unforgettable
-                moments shared across streams and platforms.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col items-end md:items-end text-right">
-            <h3 className="mb-2 text-base font-bold">Looking for more?</h3>
-            <div>
-              <div className="flex flex-row gap-2">
-                <a
-                  href="https://discord.gg/Fpa9Ps8NdR"
-                  className="hover:underline hover:text-[#feb4db]"
-                >
-                  <FaDiscord />
-                </a>
-                <a
-                  href="https://www.twitch.tv/harp6288"
-                  className="hover:underline hover:text-[#feb4db]"
-                >
-                  <FaTwitch />
-                </a>
-                <a
-                  href="https://x.com/CreatorSplash"
-                  className="hover:underline hover:text-[#feb4db]"
-                >
-                  <FaX />
-                </a>
-                <a
-                  href="https://www.instagram.com/harp_6288/"
-                  className="hover:underline hover:text-[#feb4db]"
-                >
-                  <FaInstagram />
-                </a>
-                <a
-                  href="https://www.tiktok.com/@creator.splash"
-                  className="hover:underline hover:text-[#feb4db]"
-                >
-                  <FaTiktok />
-                </a>
-                <a
-                  href="https://www.youtube.com/@CreatorSplash"
-                  className="hover:underline hover:text-[#feb4db]"
-                >
-                  <FaYoutube />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+                {/* Main Footer Content */}
+                <div className="flex flex-col md:flex-row lg:flex-row justify-between items-start w-full mb-8 gap-8 mt-8">
+                    <div className="flex flex-col md:flex-col lg:flex-row gap-6 items-center md:items-center lg:items-start flex-1 max-w-full lg:max-w-[800px]">
+                        <div className="flex items-center justify-center flex-shrink-0">
+                            <Image
+                                src="/logo.png"
+                                alt="Creator Splash"
+                                className="object-cover w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[280px] md:h-[280px] lg:w-[300px] lg:h-[300px]"
+                                width={300}
+                                height={300}
+                            />
+                        </div>
+                        <div className="flex-1 text-center md:text-center lg:text-left">
+                            <p className="leading-relaxed text-sm sm:text-base md:text-base lg:text-base">
+                                Launched in 2026, Creator Splash has been
+                                crafting standout Minecraft events that bring
+                                the community together through creativity,
+                                competition, and collaboration. With each event,
+                                we unite creators and fans from around the world
+                                to celebrate the best of Minecraft from
+                                innovative game modes to unforgettable moments
+                                shared across streams and platforms.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col items-center md:items-center lg:items-end text-center md:text-center lg:text-right w-full md:w-auto">
+                        <h3 className="mb-2 text-sm sm:text-base md:text-base lg:text-base font-bold">
+                            Looking for more?
+                        </h3>
+                        <div>
+                            <div className="flex flex-row gap-3 sm:gap-3 md:gap-2 lg:gap-2">
+                                <a
+                                    href="https://discord.gg/Fpa9Ps8NdR"
+                                    className="hover:underline hover:text-[#feb4db] text-lg sm:text-xl md:text-base lg:text-base"
+                                >
+                                    <FaDiscord />
+                                </a>
+                                <a
+                                    href="https://www.twitch.tv/harp6288"
+                                    className="hover:underline hover:text-[#feb4db] text-lg sm:text-xl md:text-base lg:text-base"
+                                >
+                                    <FaTwitch />
+                                </a>
+                                <a
+                                    href="https://x.com/CreatorSplash"
+                                    className="hover:underline hover:text-[#feb4db] text-lg sm:text-xl md:text-base lg:text-base"
+                                >
+                                    <FaX />
+                                </a>
+                                <a
+                                    href="https://www.instagram.com/harp_6288/"
+                                    className="hover:underline hover:text-[#feb4db] text-lg sm:text-xl md:text-base lg:text-base"
+                                >
+                                    <FaInstagram />
+                                </a>
+                                <a
+                                    href="https://www.tiktok.com/@creator.splash"
+                                    className="hover:underline hover:text-[#feb4db] text-lg sm:text-xl md:text-base lg:text-base"
+                                >
+                                    <FaTiktok />
+                                </a>
+                                <a
+                                    href="https://www.youtube.com/@CreatorSplash"
+                                    className="hover:underline hover:text-[#feb4db] text-lg sm:text-xl md:text-base lg:text-base"
+                                >
+                                    <FaYoutube />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        {/* Footer Bottom */}
-        {/* <div className="w-full text-center border-t border-white/20 pt-6">
+                {/* Footer Bottom */}
+                {/* <div className="w-full text-center border-t border-white/20 pt-6">
           <div className="flex flex-wrap justify-center items-center gap-2 mb-2 text-xs">
             <a href="/terms" className="hover:underline">
               Terms of Service
@@ -152,9 +156,9 @@ const Footer = () => {
             © 2026 Creator Splash. All rights reserved.
           </div>
         </div> */}
-      </div>
-    </footer>
-  );
+            </div>
+        </footer>
+    );
 };
 
 export default Footer;
