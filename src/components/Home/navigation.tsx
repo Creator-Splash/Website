@@ -25,11 +25,11 @@ export default function Navigation() {
                     {/* Logo */}
                     <Link href="/" className="flex items-center flex-shrink-0">
                         <Image
-                            src="/logo.png"
+                            src="/logo.svg"
                             alt="Creator Splash Logo"
-                            width={200}
-                            height={200}
-                            className="object-contain w-32 h-auto sm:w-40 md:w-48 lg:w-[200px]"
+                            width={100}
+                            height={100}
+                            className="object-contain w-32 h-auto sm:w-40 md:w-48 lg:w-[150px]"
                             priority
                         />
                     </Link>

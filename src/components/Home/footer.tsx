@@ -64,13 +64,14 @@ const Footer = () => {
                 {/* Main Footer Content */}
                 <div className="flex flex-col md:flex-row lg:flex-row justify-between items-start w-full mb-8 gap-8 mt-8">
                     <div className="flex flex-col md:flex-col lg:flex-row gap-6 items-center md:items-center lg:items-start flex-1 max-w-full lg:max-w-[800px]">
-                        <div className="flex items-center justify-center flex-shrink-0">
+                        <div className="flex justify-center">
                             <Image
-                                src="/logo.png"
-                                alt="Creator Splash"
-                                className="object-cover w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[280px] md:h-[280px] lg:w-[300px] lg:h-[300px]"
-                                width={300}
-                                height={300}
+                                src="/logo.svg"
+                                alt="Creator Splash Logo"
+                                width={100}
+                                height={100}
+                                className="object-contain w-32 h-auto sm:w-40 md:w-48 lg:w-[250px] -mt-15"
+                                priority
                             />
                         </div>
                         <div className="flex-1 text-center md:text-center lg:text-left">
