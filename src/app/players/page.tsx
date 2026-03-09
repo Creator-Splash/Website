@@ -1229,7 +1229,7 @@ const GameLeaderboards: React.FC = () => {
                 )}
 
                 {/* Refresh Button */}
-                <div className="text-center mt-6 sm:mt-7 md:mt-8 lg:mt-8">
+                <div className="text-center mt-6 sm:mt-7 md:mt-8 lg:mt-8 space-y-4">
                     <button
                         onClick={handleRetry}
                         className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-4 sm:px-5 md:px-6 lg:px-6 py-2 sm:py-2.5 md:py-3 lg:py-3 text-sm sm:text-base md:text-base lg:text-base rounded-lg transition-colors"
@@ -1237,6 +1237,14 @@ const GameLeaderboards: React.FC = () => {
                     >
                         Refresh Leaderboards
                     </button>
+                    <div>
+                        <a
+                            href="/players/previous"
+                            className="inline-block bg-[#3d7992] hover:bg-[#2a5a6e] text-white font-bold px-4 sm:px-5 md:px-6 lg:px-6 py-2 sm:py-2.5 md:py-3 lg:py-3 text-sm sm:text-base md:text-base lg:text-base rounded-lg transition-colors"
+                        >
+                            Previous Players
+                        </a>
+                    </div>
                 </div>
             </div>
 
