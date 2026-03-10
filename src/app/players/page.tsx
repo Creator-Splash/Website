@@ -1240,7 +1240,7 @@ const GameLeaderboards: React.FC = () => {
                     <div>
                         <a
                             href="/players/previous"
-                            className="inline-block bg-[#3d7992] hover:bg-[#2a5a6e] text-white font-bold px-4 sm:px-5 md:px-6 lg:px-6 py-2 sm:py-2.5 md:py-3 lg:py-3 text-sm sm:text-base md:text-base lg:text-base rounded-lg transition-colors"
+                            className="inline-block bg-white hover:bg-gray-100 text-[#3d7992] font-bold px-6 sm:px-8 md:px-10 lg:px-12 py-2 sm:py-2.5 md:py-3 lg:py-3 text-sm sm:text-base md:text-base lg:text-base rounded-lg transition-colors border border-[#3d7992]"
                         >
                             Previous Players
                         </a>

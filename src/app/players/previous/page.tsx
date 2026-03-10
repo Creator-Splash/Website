@@ -3,7 +3,108 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { teamMembers } from "@/data";
+
+// Player data generated from public/Players/ directory
+const previousPlayers = [
+    { name: "2kae217", image: "/Players/2kae217.jpg" },
+    { name: "3Queeni", image: "/Players/3Queeni.jpg" },
+    { name: "AbolishRegret", image: "/Players/AbolishRegret.jpg" },
+    { name: "AcornBandit", image: "/Players/AcornBandit.jpg" },
+    { name: "Agne3_", image: "/Players/Agne3_.jpg" },
+    { name: "aimseytv", image: "/Players/aimseytv.jpg" },
+    { name: "AjStumbles", image: "/Players/AjStumbles.jpg" },
+    { name: "Arteamissing", image: "/Players/Arteamissing.jpg" },
+    { name: "ArtfulMelody", image: "/Players/ArtfulMelody.jpg" },
+    { name: "ashtuneo", image: "/Players/ashtuneo.jpg" },
+    { name: "AstroKatsumiVT", image: "/Players/AstroKatsumiVT.jpg" },
+    { name: "AvitalElizabeth", image: "/Players/AvitalElizabeth.jpg" },
+    { name: "AwesomeisBlue", image: "/Players/AwesomeisBlue.jpg" },
+    { name: "beca4leafclover", image: "/Players/beca4leafclover.jpg" },
+    { name: "caliburnu5", image: "/Players/caliburnu5.jpg" },
+    { name: "CarlyPumpkin", image: "/Players/CarlyPumpkin.jpg" },
+    { name: "CHALLY071515", image: "/Players/CHALLY071515.jpg" },
+    { name: "Chandiggitydog", image: "/Players/Chandiggitydog.jpg" },
+    { name: "CyberChamp_", image: "/Players/CyberChamp_.jpg" },
+    { name: "DaHouse_Panda", image: "/Players/DaHouse_Panda.jpg" },
+    { name: "darugona", image: "/Players/darugona.jpg" },
+    { name: "Doribunn", image: "/Players/Doribunn.jpg" },
+    { name: "DreamerUnnamed", image: "/Players/DreamerUnnamed.jpg" },
+    { name: "Envilex_", image: "/Players/Envilex_.jpg" },
+    { name: "Flying Pandas", image: "/Players/Flying Pandas.jpg" },
+    { name: "Froxchu", image: "/Players/Froxchu.jpg" },
+    { name: "gainfulcoconut", image: "/Players/gainfulcoconut.jpg" },
+    { name: "GhostieFruit", image: "/Players/GhostieFruit.jpg" },
+    { name: "ghosttauk", image: "/Players/ghosttauk.jpg" },
+    { name: "GnGt75", image: "/Players/GnGt75.jpg" },
+    { name: "GoddessAkane_", image: "/Players/GoddessAkane_.jpg" },
+    { name: "Hels0n_", image: "/Players/Hels0n_.jpg" },
+    { name: "hyaz0ra", image: "/Players/hyaz0ra.jpg" },
+    { name: "ikentyi", image: "/Players/ikentyi.jpg" },
+    { name: "ImKayziee", image: "/Players/ImKayziee.jpg" },
+    { name: "ItsToxumi", image: "/Players/ItsToxumi.jpg" },
+    { name: "ItzAuxiliary", image: "/Players/ItzAuxiliary.jpg" },
+    { name: "ItzIgglePiggles", image: "/Players/ItzIgglePiggles.jpg" },
+    { name: "JackCas_", image: "/Players/JackCas_.jpg" },
+    { name: "Jake_Stone1118", image: "/Players/Jake_Stone1118.jpg" },
+    { name: "jojosolos", image: "/Players/jojosolos.jpg" },
+    { name: "Khaos_Korps", image: "/Players/Khaos_Korps.jpg" },
+    { name: "King_WolfLIVE", image: "/Players/King_WolfLIVE.jpg" },
+    { name: "LaKitty101MC", image: "/Players/LaKitty101MC.jpg" },
+    { name: "LaurrelLive", image: "/Players/LaurrelLive.png" },
+    { name: "lemonthynealt", image: "/Players/lemonthynealt.jpg" },
+    { name: "LiariTTV", image: "/Players/LiariTTV.png" },
+    { name: "Londons_Antari", image: "/Players/Londons_Antari.jpg" },
+    { name: "Lufflin_", image: "/Players/Lufflin_.jpg" },
+    { name: "lunarafia", image: "/Players/lunarafia.jpg" },
+    { name: "M33kMike_", image: "/Players/M33kMike_.jpg" },
+    { name: "MacmiEli", image: "/Players/MacmiEli.jpg" },
+    { name: "MAGlCSINGS", image: "/Players/MAGlCSINGS.jpg" },
+    { name: "maskyzee", image: "/Players/maskyzee.jpg" },
+    { name: "Meepstic", image: "/Players/Meepstic.jpg" },
+    { name: "melizsayay", image: "/Players/melizsayay.jpg" },
+    { name: "MillaStaria", image: "/Players/MillaStaria.jpg" },
+    { name: "moonbugvt", image: "/Players/moonbugvt.jpg" },
+    { name: "Mr_BurningBear", image: "/Players/Mr_BurningBear.jpg" },
+    { name: "MrPrawes", image: "/Players/MrPrawes.jpg" },
+    { name: "mummysparklec", image: "/Players/mummysparklec.jpg" },
+    { name: "NashNougat", image: "/Players/NashNougat.jpg" },
+    { name: "neon_xox_", image: "/Players/neon_xox_.jpg" },
+    { name: "neochampy", image: "/Players/neochampy.jpg" },
+    { name: "nonoscarnival", image: "/Players/nonoscarnival.jpg" },
+    { name: "NoNipzX", image: "/Players/NoNipzX.jpg" },
+    { name: "nukumorikaliket", image: "/Players/nukumorikaliket.jpg" },
+    { name: "OrangeAily", image: "/Players/OrangeAily.jpg" },
+    { name: "Owengejuice", image: "/Players/Owengejuice.jpg" },
+    { name: "Pandastra_", image: "/Players/Pandastra_.jpg" },
+    { name: "raiinevt", image: "/Players/raiinevt.jpg" },
+    { name: "regisaur__", image: "/Players/regisaur__.jpg" },
+    { name: "rexmin203", image: "/Players/rexmin203.jpg" },
+    { name: "rhilistic", image: "/Players/rhilistic.jpg" },
+    { name: "Roscumber", image: "/Players/Roscumber.jpg" },
+    { name: "s0phttv", image: "/Players/s0phttv.jpg" },
+    { name: "SandwichLord690", image: "/Players/SandwichLord690.jpg" },
+    { name: "Sapsarata", image: "/Players/Sapsarata.jpg" },
+    { name: "sardin4_", image: "/Players/sardin4_.jpg" },
+    { name: "sarunaa", image: "/Players/sarunaa.jpg" },
+    { name: "Seapeekay", image: "/Players/Seapeekay.jpg" },
+    { name: "Shania_ttv", image: "/Players/Shania_ttv.jpg" },
+    { name: "shayxllow", image: "/Players/shayxllow.jpg" },
+    { name: "ShivaRoseBloom", image: "/Players/ShivaRoseBloom.jpg" },
+    { name: "Skeletoniee", image: "/Players/Skeletoniee.jpg" },
+    { name: "som1stoleAxo", image: "/Players/som1stoleAxo.jpg" },
+    { name: "spideyarmy_", image: "/Players/spideyarmy_.jpg" },
+    { name: "StormVleugels", image: "/Players/StormVleugels.jpg" },
+    { name: "sugarfern__", image: "/Players/sugarfern__.jpg" },
+    { name: "tank_matt", image: "/Players/tank_matt.jpg" },
+    { name: "Tazzomi", image: "/Players/Tazzomi.jpg" },
+    { name: "TesseractTown", image: "/Players/TesseractTown.jpg" },
+    { name: "theambear_", image: "/Players/theambear_.jpg" },
+    { name: "TheTaciturn0ne", image: "/Players/TheTaciturn0ne.jpg" },
+    { name: "TotallyVelvet", image: "/Players/TotallyVelvet.jpg" },
+    { name: "whoisbobbymac", image: "/Players/whoisbobbymac.jpg" },
+    { name: "yooniexes", image: "/Players/yooniexes.jpg" },
+    { name: "YourCrazyAB", image: "/Players/YourCrazyAB.jpg" },
+];
 
 const PreviousPlayers: React.FC = () => {
     // Previous Players search and filter state
@@ -47,20 +148,16 @@ const PreviousPlayers: React.FC = () => {
     ];
 
     // Filter previous players based on search and filters
-    const filteredPlayers = teamMembers.slice(0, 12).filter((member, index) => {
-        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        const month = months[index % 12];
-        
+    const filteredPlayers = previousPlayers.filter((player) => {
         // Search by name
         const matchesSearch = searchQuery === "" || 
-            member.name.toLowerCase().includes(searchQuery.toLowerCase());
+            player.name.toLowerCase().includes(searchQuery.toLowerCase());
         
         // Filter by civilisation (currently all are "Civilisation")
         const matchesCivilisation = civilisationFilter === "" || civilisationFilter === "civilisation";
         
-        // Filter by season
-        const matchesSeason = seasonFilter === "" || 
-            (seasonFilter === "feb2026" && month === "February");
+        // Filter by season (all players are from Feb 2026)
+        const matchesSeason = seasonFilter === "" || seasonFilter === "feb2026";
         
         return matchesSearch && matchesCivilisation && matchesSeason;
     });
@@ -220,10 +317,7 @@ const PreviousPlayers: React.FC = () => {
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 justify-items-center">
-                        {filteredPlayers.map((member, index) => {
-                            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-                            const originalIndex = teamMembers.findIndex(m => m.name === member.name);
-                            const month = months[originalIndex % 12];
+                        {filteredPlayers.map((player, index) => {
                             return (
                             <div
                                 key={index}
@@ -243,11 +337,11 @@ const PreviousPlayers: React.FC = () => {
                                             width: "100%",
                                         }}
                                     >
-                                        {/* Player head image */}
+                                        {/* Player image */}
                                         <div className="relative w-full h-full flex items-center justify-center bg-slate-600">
                                             <Image
-                                                src={`https://mc-heads.net/avatar/${member.name}/512`}
-                                                alt={member.name}
+                                                src={player.image}
+                                                alt={player.name}
                                                 fill
                                                 className="object-cover"
                                                 unoptimized
@@ -284,7 +378,7 @@ const PreviousPlayers: React.FC = () => {
                                                       `,
                                                     }}
                                                 >
-                                                    {member.name}
+                                                    {player.name}
                                                 </span>
                                             </div>
                                         </div>
