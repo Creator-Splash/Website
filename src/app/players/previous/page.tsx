@@ -321,7 +321,7 @@ const PreviousPlayers: React.FC = () => {
                             return (
                             <div
                                 key={index}
-                                className="rounded-none overflow-visible shadow-none hover:shadow-2xl transition-shadow duration-300 w-full max-w-xs"
+                                className="rounded-none overflow-visible hover:scale-105 hover:-translate-y-2 transition-all duration-300 w-full max-w-xs cursor-pointer"
                                 style={{ backgroundColor: "#3d7992" }}
                             >
                                 {/* Polaroid card with 3:4 aspect ratio */}
