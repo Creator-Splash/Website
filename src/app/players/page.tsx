@@ -1229,7 +1229,7 @@ const GameLeaderboards: React.FC = () => {
                 )}
 
                 {/* Refresh Button */}
-                <div className="text-center mt-6 sm:mt-7 md:mt-8 lg:mt-8">
+                <div className="text-center mt-6 sm:mt-7 md:mt-8 lg:mt-8 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
                     <button
                         onClick={handleRetry}
                         className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-4 sm:px-5 md:px-6 lg:px-6 py-2 sm:py-2.5 md:py-3 lg:py-3 text-sm sm:text-base md:text-base lg:text-base rounded-lg transition-colors"
@@ -1240,15 +1240,60 @@ const GameLeaderboards: React.FC = () => {
                 </div>
             </div>
 
-            {/* White Section with Previous Players Button */}
-            <div className="min-h-screen bg-white flex items-center justify-center">
-                <div className="text-center">
-                    <a
-                        href="/players/previous"
-                        className="inline-block bg-[#3d7992] hover:bg-[#2d5a6e] text-white font-bold px-8 sm:px-10 md:px-12 lg:px-14 py-3 sm:py-3.5 md:py-4 lg:py-4 text-base sm:text-lg md:text-xl lg:text-xl rounded-lg transition-colors"
-                    >
-                        Previous Players
-                    </a>
+            {/* Gallery Section - White Background */}
+            <div className="bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+                <div className="w-[80%] mx-auto">
+                    <h2 className="text-gray-800 text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-center mb-8 sm:mb-10 md:mb-12 lg:mb-12">
+                        Game Highlights
+                    </h2>
+                    <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+                        <div className="rounded-2xl overflow-hidden shadow-xl">
+                            <Image
+                                src="/players-assets/G-_0BMjWsAEEsAM.jpg"
+                                alt="Game Highlight 1"
+                                width={1920}
+                                height={1081}
+                                className="w-full h-auto"
+                            />
+                        </div>
+                        <div className="rounded-2xl overflow-hidden shadow-xl">
+                            <Image
+                                src="/players-assets/G--YAWoWQAAV2Y_.jpg"
+                                alt="Game Highlight 2"
+                                width={1920}
+                                height={1080}
+                                className="w-full h-auto"
+                            />
+                        </div>
+                        <div className="rounded-2xl overflow-hidden shadow-xl">
+                            <Image
+                                src="/players-assets/G-6GTFRXIAAyLnC.jpg"
+                                alt="Game Highlight 3"
+                                width={1440}
+                                height={1440}
+                                className="w-full h-auto"
+                            />
+                        </div>
+                        <div className="rounded-2xl overflow-hidden shadow-xl">
+                            <Image
+                                src="/players-assets/2026-01-17_20.42.24.png"
+                                alt="Game Highlight 4"
+                                width={1920}
+                                height={1009}
+                                className="w-full h-auto"
+                            />
+                        </div>
+                    </div>
+                    
+                    {/* Previous Players Button */}
+                    <div className="text-center mt-12 sm:mt-14 md:mt-16 lg:mt-16">
+                        <a
+                            href="/players/previous"
+                            className="inline-block bg-[#3d7992] hover:bg-[#2d5a6e] text-white font-bold px-8 sm:px-10 md:px-12 lg:px-14 py-3 sm:py-3.5 md:py-4 lg:py-4 text-base sm:text-lg md:text-xl lg:text-xl rounded-lg transition-colors"
+                        >
+                            Previous Players
+                        </a>
+                    </div>
                 </div>
             </div>
 
