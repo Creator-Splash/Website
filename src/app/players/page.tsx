@@ -570,17 +570,14 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ game }) => (
     <div className="text-center py-12">
-        <div className="relative">
-            <div className="animate-spin rounded-full h-16 w-16 border-4 border-gray-600 border-t-yellow-400 mx-auto"></div>
-            <div className="absolute inset-0 flex items-center justify-center">
-                <Image
-                    src={game.icon}
-                    alt={game.name}
-                    width={32}
-                    height={32}
-                    className="w-8 h-8"
-                />
-            </div>
+        <div className="relative w-16 h-16 mx-auto">
+            <Image
+                src="/heads/Axolotl_1.png"
+                alt="Loading"
+                width={64}
+                height={64}
+                className="w-16 h-16 animate-spin"
+            />
         </div>
         <p className="text-gray-300 mt-6 text-lg">
             Loading {game.name} leaderboards...
