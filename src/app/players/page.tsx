@@ -1232,14 +1232,14 @@ const GameLeaderboards: React.FC = () => {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6 sm:mt-7 md:mt-8 lg:mt-8 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
                     <button
                         onClick={handleRetry}
-                        className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 sm:py-5 md:py-6 lg:py-6 text-lg sm:text-xl md:text-2xl lg:text-2xl rounded-xl transition-colors min-w-[280px] sm:min-w-[300px] md:min-w-[320px] lg:min-w-[320px] text-center whitespace-nowrap"
+                        className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-4 sm:px-5 md:px-6 lg:px-6 py-2 sm:py-2.5 md:py-3 lg:py-3 text-sm sm:text-base md:text-base lg:text-base rounded-lg transition-colors whitespace-nowrap"
                         type="button"
                     >
                         Refresh Leaderboards
                     </button>
                     <a
                         href="/players/previous"
-                        className="inline-block bg-[#3d7992] hover:bg-[#2d5a6e] text-white font-bold py-4 sm:py-5 md:py-6 lg:py-6 text-lg sm:text-xl md:text-2xl lg:text-2xl rounded-xl transition-colors min-w-[280px] sm:min-w-[300px] md:min-w-[320px] lg:min-w-[320px] text-center whitespace-nowrap"
+                        className="inline-block bg-[#3d7992] hover:bg-[#2d5a6e] text-white font-bold px-4 sm:px-5 md:px-6 lg:px-6 py-2 sm:py-2.5 md:py-3 lg:py-3 text-sm sm:text-base md:text-base lg:text-base rounded-lg transition-colors whitespace-nowrap text-center"
                     >
                         Previous Players
                     </a>
