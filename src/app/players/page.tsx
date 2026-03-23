@@ -1228,15 +1228,21 @@ const GameLeaderboards: React.FC = () => {
                     </div>
                 )}
 
-                {/* Refresh Button */}
-                <div className="text-center mt-6 sm:mt-7 md:mt-8 lg:mt-8 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
+                {/* Refresh Button and Previous Players Button */}
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6 sm:mt-7 md:mt-8 lg:mt-8 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
                     <button
                         onClick={handleRetry}
-                        className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-4 sm:px-5 md:px-6 lg:px-6 py-2 sm:py-2.5 md:py-3 lg:py-3 text-sm sm:text-base md:text-base lg:text-base rounded-lg transition-colors"
+                        className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 sm:py-5 md:py-6 lg:py-6 text-lg sm:text-xl md:text-2xl lg:text-2xl rounded-xl transition-colors min-w-[280px] sm:min-w-[300px] md:min-w-[320px] lg:min-w-[320px] text-center whitespace-nowrap"
                         type="button"
                     >
                         Refresh Leaderboards
                     </button>
+                    <a
+                        href="/players/previous"
+                        className="inline-block bg-[#3d7992] hover:bg-[#2d5a6e] text-white font-bold py-4 sm:py-5 md:py-6 lg:py-6 text-lg sm:text-xl md:text-2xl lg:text-2xl rounded-xl transition-colors min-w-[280px] sm:min-w-[300px] md:min-w-[320px] lg:min-w-[320px] text-center whitespace-nowrap"
+                    >
+                        Previous Players
+                    </a>
                 </div>
             </div>
 
@@ -1247,115 +1253,83 @@ const GameLeaderboards: React.FC = () => {
                         Game Highlights
                     </h2>
                     
-                    {/* Layout with centered button and images around it */}
-                    <div className="relative flex flex-col items-center">
-                        {/* Desktop/Tablet: Grid layout with button in center */}
-                        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8 w-full">
-                            {/* Top Left Image */}
-                            <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
-                                <Image
-                                    src="/players-assets/G-_0BMjWsAEEsAM.jpg"
-                                    alt="Game Highlight 1"
-                                    width={1920}
-                                    height={1080}
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            {/* Top Right Image */}
-                            <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
-                                <Image
-                                    src="/players-assets/G--YAWoWQAAV2Y_.jpg"
-                                    alt="Game Highlight 2"
-                                    width={1920}
-                                    height={1080}
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
+                    {/* Desktop/Tablet: 3 images per row */}
+                    <div className="hidden md:grid md:grid-cols-3 gap-6 lg:gap-8 w-full">
+                        <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
+                            <Image
+                                src="/players-assets/G-_0BMjWsAEEsAM.jpg"
+                                alt="Game Highlight 1"
+                                width={1920}
+                                height={1080}
+                                className="w-full h-full object-cover"
+                            />
                         </div>
-                        
-                        {/* Centered Previous Players Button */}
-                        <div className="hidden md:flex justify-center my-12 lg:my-16">
-                            <a
-                                href="/players/previous"
-                                className="inline-block bg-[#3d7992] hover:bg-[#2d5a6e] text-white font-bold px-16 md:px-20 lg:px-28 py-6 md:py-7 lg:py-8 text-2xl md:text-3xl lg:text-4xl rounded-2xl transition-colors shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200"
-                            >
-                                Previous Players
-                            </a>
+                        <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
+                            <Image
+                                src="/players-assets/G--YAWoWQAAV2Y_.jpg"
+                                alt="Game Highlight 2"
+                                width={1920}
+                                height={1080}
+                                className="w-full h-full object-cover"
+                            />
                         </div>
-                        
-                        {/* Desktop/Tablet: Bottom row of images */}
-                        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8 w-full">
-                            {/* Bottom Left Image */}
-                            <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
-                                <Image
-                                    src="/players-assets/G-6GTFRXIAAyLnC.jpg"
-                                    alt="Game Highlight 3"
-                                    width={1440}
-                                    height={1440}
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            {/* Bottom Right Image */}
-                            <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
-                                <Image
-                                    src="/players-assets/2026-01-17_20.42.24.png"
-                                    alt="Game Highlight 4"
-                                    width={1920}
-                                    height={1009}
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
+                        <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
+                            <Image
+                                src="/players-assets/G-6GTFRXIAAyLnC.jpg"
+                                alt="Game Highlight 3"
+                                width={1440}
+                                height={1440}
+                                className="w-full h-full object-cover"
+                            />
                         </div>
-                        
-                        {/* Mobile: Stacked layout */}
-                        <div className="md:hidden flex flex-col gap-6 w-full">
-                            <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
-                                <Image
-                                    src="/players-assets/G-_0BMjWsAEEsAM.jpg"
-                                    alt="Game Highlight 1"
-                                    width={1920}
-                                    height={1080}
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
-                                <Image
-                                    src="/players-assets/G--YAWoWQAAV2Y_.jpg"
-                                    alt="Game Highlight 2"
-                                    width={1920}
-                                    height={1080}
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            
-                            {/* Mobile: Centered Button */}
-                            <div className="flex justify-center my-6">
-                                <a
-                                    href="/players/previous"
-                                    className="inline-block bg-[#3d7992] hover:bg-[#2d5a6e] text-white font-bold px-12 py-5 text-xl rounded-xl transition-colors shadow-lg"
-                                >
-                                    Previous Players
-                                </a>
-                            </div>
-                            
-                            <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
-                                <Image
-                                    src="/players-assets/G-6GTFRXIAAyLnC.jpg"
-                                    alt="Game Highlight 3"
-                                    width={1440}
-                                    height={1440}
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
-                                <Image
-                                    src="/players-assets/2026-01-17_20.42.24.png"
-                                    alt="Game Highlight 4"
-                                    width={1920}
-                                    height={1009}
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
+                        <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
+                            <Image
+                                src="/players-assets/2026-01-17_20.42.24.png"
+                                alt="Game Highlight 4"
+                                width={1920}
+                                height={1009}
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                    </div>
+                    
+                    {/* Mobile: Stacked layout */}
+                    <div className="md:hidden flex flex-col gap-6 w-full">
+                        <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
+                            <Image
+                                src="/players-assets/G-_0BMjWsAEEsAM.jpg"
+                                alt="Game Highlight 1"
+                                width={1920}
+                                height={1080}
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
+                            <Image
+                                src="/players-assets/G--YAWoWQAAV2Y_.jpg"
+                                alt="Game Highlight 2"
+                                width={1920}
+                                height={1080}
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
+                            <Image
+                                src="/players-assets/G-6GTFRXIAAyLnC.jpg"
+                                alt="Game Highlight 3"
+                                width={1440}
+                                height={1440}
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
+                            <Image
+                                src="/players-assets/2026-01-17_20.42.24.png"
+                                alt="Game Highlight 4"
+                                width={1920}
+                                height={1009}
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                     </div>
                 </div>
