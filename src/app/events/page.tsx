@@ -298,7 +298,7 @@ export default function Events() {
                     >
                         <path
                             d="M0,60 C300,20 600,100 900,60 C1050,30 1150,80 1200,60 L1200,120 L0,120 Z"
-                            fill="#3b82f6"
+                            fill="#39b5ff"
                         />
                     </svg>
                 </div>
@@ -306,6 +306,47 @@ export default function Events() {
 
             
            
+
+            {/* Merch section */}
+            <section className="relative bg-[#39b5ff] py-12 sm:py-16 md:py-20 lg:py-24 min-h-[400px] sm:min-h-[600px] md:min-h-[800px] lg:min-h-[1000px] xl:min-h-[1100px]">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/merch1.png"
+                        alt="meow"
+                        fill
+                        className="object-cover object-center"
+                        priority
+                    />
+                </div>
+
+                {/* Optional overlay to maintain text readability */}
+                <div className="absolute inset-0 z-10"></div>
+
+                {/* Centered Content Container */}
+                <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
+                    <Link href="https://creatorsplash-shop.fourthwall.com/en-gbp">
+                        {" "}
+                        <button className="bg-[#fb8246] text-[#000000] font-bold uppercase text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg shadow-lg hover:bg-[#ff946d] transition-colors text-center max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+                            Support your team
+                        </button>
+                    </Link>
+                </div>
+
+                {/* Wavy Bottom Border */}
+                <div className="absolute -bottom-1 left-0 w-full overflow-hidden">
+                    <svg
+                        className="relative block w-full h-12 sm:h-16 md:h-20"
+                        viewBox="0 0 1200 120"
+                        preserveAspectRatio="none"
+                    >
+                        <path
+                            d="M0,60 C300,100 600,20 900,60 C1050,80 1150,30 1200,60 L1200,120 L0,120 Z"
+                            fill="#3b82f6"
+                        />
+                    </svg>
+                </div>
+            </section>
 
             {/* Games Section */}
             <section className="relative bg-[#3b82f6] py-8 sm:py-12 md:py-14 lg:py-16">
@@ -487,47 +528,6 @@ export default function Events() {
                             ))}
                         </div>
                     </div>
-                </div>
-
-                {/* Wavy Bottom Border */}
-                <div className="absolute -bottom-1 left-0 w-full overflow-hidden">
-                    <svg
-                        className="relative block w-full h-12 sm:h-16 md:h-20"
-                        viewBox="0 0 1200 120"
-                        preserveAspectRatio="none"
-                    >
-                        <path
-                            d="M0,60 C300,100 600,20 900,60 C1050,80 1150,30 1200,60 L1200,120 L0,120 Z"
-                            fill="#39b5ff"
-                        />
-                    </svg>
-                </div>
-            </section>
-
-            {/* Merch section */}
-            <section className="relative bg-[#39b5ff] py-12 sm:py-16 md:py-20 lg:py-24 min-h-[400px] sm:min-h-[600px] md:min-h-[800px] lg:min-h-[1000px] xl:min-h-[1100px]">
-                {/* Background Image */}
-                <div className="absolute inset-0 z-0">
-                    <Image
-                        src="/merch1.png"
-                        alt="meow"
-                        fill
-                        className="object-cover object-center"
-                        priority
-                    />
-                </div>
-
-                {/* Optional overlay to maintain text readability */}
-                <div className="absolute inset-0 z-10"></div>
-
-                {/* Centered Content Container */}
-                <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
-                    <Link href="https://creatorsplash-shop.fourthwall.com/en-gbp">
-                        {" "}
-                        <button className="bg-[#fb8246] text-[#000000] font-bold uppercase text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg shadow-lg hover:bg-[#ff946d] transition-colors text-center max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
-                            Support your team
-                        </button>
-                    </Link>
                 </div>
             </section>
         </div>
