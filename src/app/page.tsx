@@ -105,17 +105,13 @@ export default function Page() {
                             We&apos;ve worked with...
                         </h3>
 
-                        {/* Partner logos grid with stagger animation */}
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6 sm:gap-7 md:gap-8 lg:gap-8 items-center justify-items-center opacity-60">
-                            {Array.from({ length: 8 }).map((_, index) => (
-                                <div
-                                    key={index}
-                                    className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-16 lg:h-16 bg-gray-600 rounded-lg animate-pulse hover:bg-gray-500 transition-colors duration-300`}
-                                    style={{
-                                        animationDelay: `${index * 100}ms`,
-                                    }}
-                                ></div>
-                            ))}
+                        {/* Partner logos */}
+                        <div className="flex justify-center items-center">
+                            <img
+                                src="/workedwith/image.png"
+                                alt="GPortal"
+                                className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
                         </div>
                     </div>
                 </section>
