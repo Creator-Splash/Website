@@ -9,6 +9,7 @@ import {
 import Home from "@/components/Home/Home";
 import About from "@/components/Home/About";
 import Informations from "@/components/Home/Info";
+import WorkedWith from "@/components/Home/WorkedWith";
 
 const faqData = [
     {
@@ -98,23 +99,8 @@ export default function Page() {
                     </div>
                 </section>
 
-                {/* We&apos;ve worked with Section */}
-                <section className="py-12 sm:py-14 md:py-16 lg:py-16 px-4 bg-[#1a202c]">
-                    <div className="container mx-auto max-w-6xl text-center">
-                        <h3 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-black text-white mb-8 sm:mb-10 md:mb-12 lg:mb-12 animate-fade-in">
-                            We&apos;ve worked with...
-                        </h3>
-
-                        {/* Partner logos */}
-                        <div className="flex justify-center items-center">
-                            <img
-                                src="/workedwith/image.png"
-                                alt="GPortal"
-                                className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                        </div>
-                    </div>
-                </section>
+                {/* We've worked with Section */}
+                <WorkedWith />
 
                 {/* Footer with Social Icons */}
             </div>
